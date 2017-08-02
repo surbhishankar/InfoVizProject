@@ -1,0 +1,1990 @@
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><style type="text/css">.gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div{font-weight:400}</style><style type="text/css">.gm-style-pbc{transition:opacity ease-in-out;background-color:black;text-align:center}.gm-style-pbt{font-size:22px;color:white;font-family:Roboto,Arial,sans-serif;position:relative;margin:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}</style><link type="text/css" rel="stylesheet" href="./proj_files/css"><style type="text/css">.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}</style><style type="text/css">@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style type="text/css">.gm-style{font-family:Roboto,Arial,sans-serif;font-size:11px;font-weight:400;text-decoration:none}.gm-style img{max-width:none}</style>
+<style>
+
+div.tooltip {
+  color: #222; 
+  background: #fff; 
+  padding: .5em; 
+  text-shadow: #f5f5f5 0 1px 0;
+  border-radius: 2px; 
+  box-shadow: 0px 0px 2px 0px #a6a6a6; 
+  opacity: 0.9; 
+  position: absolute;
+}
+.typeahead,
+.tt-query,
+.tt-hint {
+  width: 300px;
+  height: 10px;
+  padding: 8px 12px;
+  font-size: 24px;
+  line-height: 30px;
+  border: 2px solid #ccc;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  outline: none;
+}
+
+.typeahead {
+  background-color: #fff;
+}
+
+.typeahead:focus {
+  border: 2px solid #0097cf;
+}
+
+.tt-query {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+  color: #999
+}
+
+.tt-dropdown-menu {
+  width: 300px;
+  margin-top: 12px;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.tt-suggestion {
+  padding: 3px 20px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: #0097cf;
+
+}
+
+.tt-suggestion p {
+  margin: 0;
+}
+
+
+
+</style>  
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://surabhi.anilkreddy.me/assets/favicon.ico">
+
+    <title>Information Visualization Project</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./proj_files/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="./proj_files/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="./proj_files/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./proj_files/theme.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <script type="text/javascript" charset="UTF-8" src="./proj_files/common.js"></script><script type="text/javascript" charset="UTF-8" src="./proj_files/map.js"></script><script type="text/javascript" charset="UTF-8" src="./proj_files/util.js"></script><script type="text/javascript" charset="UTF-8" src="./proj_files/onion.js"></script><script type="text/javascript" charset="UTF-8" src="./proj_files/controls.js"></script><script type="text/javascript" charset="UTF-8" src="./proj_files/stats.js"></script><script type="text/javascript" charset="UTF-8" src="./proj_files/marker.js"></script><script type="text/javascript" charset="UTF-8" src="./proj_files/infowindow.js"></script><script type="text/javascript" charset="UTF-8" src="./proj_files/common(1).js"></script><script type="text/javascript" charset="UTF-8" src="./proj_files/util(1).js"></script><script type="text/javascript" charset="UTF-8" src="./proj_files/stats(1).js"></script><script type="text/javascript" charset="UTF-8" src="./proj_files/AuthenticationService.Authenticate"></script><script type="text/javascript" charset="UTF-8" src="./proj_files/common(2).js"></script><script type="text/javascript" charset="UTF-8" src="./proj_files/util(2).js"></script><script type="text/javascript" charset="UTF-8" src="./proj_files/stats(2).js"></script><script type="text/javascript" charset="UTF-8" src="./proj_files/AuthenticationService(1).Authenticate"></script></head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./proj_files/proj.html">Information Visualization Project</a>
+        </div>
+        <!--<div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>--><!--/.nav-collapse -->
+      </div>
+    </nav>
+<div id="dummy"> </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <div class="panel-title"><legend>ODU Course Listing</legend></div>
+                    </div><!--.panel-heading-->
+                    <div class="panel-body">
+                        <form class="form-horizontal" id="list">
+                            <fieldset>
+                                <!-- Select Basic -->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="major">Major</label>
+                                    <div class="col-md-8">
+                                     <select id="major" name="major" class="form-control">
+										  <option value="" style="display:none;"></option>
+                                            <option value="AAST">African-American Studies</option>
+                                            <option value="ACCT">Accounting</option>
+                                            <option value="Mathematical Sciences">Mathematical Sciences</option>
+                                            <option value="AMST">American Studies</option>
+                                            <option value="ANTR">Anthropology</option>
+											<option value="ARAB">Arabic</option>
+                                            <option value="ARTH">Art History</option>
+                                            <option value="ARTS">Art, Studio</option>
+                                            <option value="ASIA">Asian Studies</option>
+                                            <option value="BIOL">Biological Sciences</option>
+                                            <option value="AT	">Athletic Training</option>
+											<option value="CS">Computer Science</option>
+                                            <option value="BME">Biomedical Engineering</option>
+                                            <option value="BNAL">Business Analytics</option>
+                                            <option value="BUSN">Business Administration</option>
+                                            <option value="CCL">Community College Leadership</option>
+                                            <option value="CEE">Civil and Environmental Engineering</option>
+                                            <option value="CET">Civil Engineering Technologye</option>
+                                            <option value="CHEM">Chemistry and Biochemistry</option>
+                                            <option value="CHIN">Chinese</option>
+                                            <option value="CHP">Community Health Professions</option>
+                                            <option value="COMM">Communications</option>
+                                            <option value="COUN">Counseling</option>
+                                            <option value="CRIM">Criminology</option>
+                                            <option value="CRJS">Criminal Justice</option>
+                                            <option value="CS">Computer Science</option>
+                                            <option value="CSD">Communication Sciences and Disorders</option>
+                                            <option value="CYTO">Cytotechnology</option>
+                                            <option value="DANC">Dance</option>
+                                            <option value="DNTH">Dental Hygiene</option>
+                                            <option value="ECE">Electrical and Computer Engineering</option>
+                                            <option value="ECON">Economics</option>
+                                            <option value="EET">Electrical Engineering Technology</option>
+                                            <option value="ELS">Educational Leadership and Services</option>
+                                            <option value="ENGL">English</option>
+                                            <option value="ENGN">Engineering</option>
+                                            <option value="ENGT">Engineering Technology</option>
+                                            <option value="ENMA">Engineering Management</option>
+                                            <option value="ENTR">Entrepreneurship</option>
+                                            <option value="ENVH">Environmental Health</option>
+                                            <option value="ESL">ESL</option>
+                                            <option value="EXSC">Exercise Science</option>
+                                            <option value="FIN">Finance</option>
+                                            <option value="FLET">Foreign Literature in English Translation</option>
+                                            <option value="FOUN">Foundations of Education</option>
+                                            <option value="FR">French</option>
+                                            <option value="GEOG">Geography</option>
+                                            <option value="GER">German</option>
+                                            <option value="HIST">Higher Education</option>
+                                            <option value="HLSC">Health Sciences</option>
+                                            <option value="HLTH?">Health</option>
+                                            <option value="HMS">Human Movement Sciences</option>
+                                            <option value="HMSV">Human Services</option>
+                                            <option value="HNRS">Honors</option>
+                                            <option value="HPE">Health and Physical Education</option>
+                                            <option value="HUM">Humanities</option>
+                                            <option value="IDT	">Instructional Design and Technology</option>
+                                            <option value="INBU">International Busine</option>
+                                            <option value="IS">International Studies</option>
+                                            <option value="IT">Information Technology</option>
+                                            <option value="ITAL">Italian</option>
+                                            <option value="JAPN">Japanese</option>
+                                            <option value="KRS">Kinesiology And Rehab Sci</option>
+                                            <option value="LATN">Latin</option>
+                                            <option value="MAE">Mechanical and Aerospace Engineering</option>
+                                            <option value="MAPD">Math Pedagogy</option>
+                                            <option value="MATH">Mathematical Sciences</option>
+                                            <option value="MBA">	Master of Business Administration</option>
+                                            <option value="MDTS">Medical Diagnostic and Translational Sciences</option>
+                                            <option value="MEDT">Medical Technology</option>
+                                            <option value="MET">Mechanical Engineering Technology</option>
+                                            <option value="MGMT">Management</option>
+                                            <option value="MKTG">Marketing</option>
+                                            <option value="MSCM">Maritime and Supply Chain Management</option>
+                                            <option value="MSIM">Modeling and Simulation</option>
+                                            <option value="MSL">Military Science and Leadership</option>
+                                            <option value="MUSC">Music</option>
+                                            <option value="NAVS">Naval Science</option>
+                                            <option value="NMED">Nuclear Medicine Technology</option>
+                                            <option value="NURA">Nurse Anesthesia</option>
+                                            <option value="NURS">Nursing</option>
+											 <option value="HLTH?">Health</option>
+                                            <option value="OEAS">Ocean, Earth and Atmospheric Sciences</option>
+                                            <option value="OPMT">Operations Management</option>
+                                            <option value="PADM">Public Administration</option>
+                                            <option value="PAUP">Public Administration and Urban Policy</option>
+                                            <option value="PE">Physical Education</option>
+                                            <option value="PHIL	">Philosophy</option>
+                                            <option value="PHYS">Physics</option>
+                                            <option value="POLS">Political Science</option>
+                                            <option value="PORT">Maritime, Ports and Logistics Management</option>
+                                            <option value="PRTS">Parks, Recreation and Tourism Studies</option>
+                                            <option value="PSYC">Psychology</option>
+                                            <option value="PT">Physical Therapy</option>
+                                            <option value="READ">Reading</option>
+                                            <option value="REL">Religious Studies</option>
+                                            <option value="RUS">Russian</option>
+                                            <option value="SCI">Sciences</option>
+                                            <option value="SEPS">STEM Education and Professional Studies</option>
+                                            <option value="SMGT">Sport Management</option>
+                                            <option value="SOC">Sociology</option>
+                                            <option value="SPAN">Spanish</option>
+                                            <option value="SPED">Special Education</option>
+                                            <option value="SRM	">Sport and Recreation Management</option>
+                                            <option value="STAT">Statistics</option>
+                                            <option value="STEM">Science, Technology, Engineering, and Mathematics Education</option>
+                                            <option value="THEA">Theatre</option>
+                                            <option value="TLCI">Teaching &amp; Learning - Curriculum &amp; Instruction</option>
+                                            <option value="TLED">Teaching &amp; Learning-Education</option>
+                                            <option value="UNIV">University</option>
+                                            <option value="WMST">Women's Studies</option>
+                                        </select>
+										<!--<input id="major" name="major" type="major" placeholder="enter your major" class="form-control input-md" required="">
+                                    -->
+									</div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="time">Time</label>
+                                    <div class="col-md-8">
+                                           <input id="time" name="time" type="time" placeholder="Time" class="form-control input-md">
+
+                                    </div>
+                                </div>
+
+                                <!-- Select Basic -->
+                                
+
+                                <!-- Search input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="search">Course Search</label>
+                                    <div class="col-md-8">
+									
+									
+                                       <span class="twitter-typeahead" style="position: relative; display: inline-block;"><input class="typeahead form-control tt-hint" type="text" autocomplete="off" spellcheck="false" dir="auto" style="vertical-align: top; position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);" disabled=""><input id="search" class="typeahead form-control tt-input" type="text" placeholder="Type course here" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: nowrap; font-family: &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset-0"></div></span></span>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-buttons">
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-md-9">
+                                            <button type="button" class="btn btn-primary" onclick="markvalues()">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+								<div> </div>
+                            </fieldset>
+                        </form>
+
+                    </div><!--.panel-body-->
+                </div><!--.panel-->
+            </div><!--.col-md-6-->
+            <div class="col-md-8">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <div class="panel-title"><legend>Location</legend></div>
+                    </div><!--.panel-heading-->
+                    <div class="panel-body">
+                        <div id="gmaps" class="odu-map" style="height: 0px; position: relative; overflow: hidden; transform: translateZ(0px); background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0; cursor: url(&quot;http://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 233px; top: -1px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -23px; top: -1px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 489px; top: -1px;"></div></div></div></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"></div><div style="position: absolute; z-index: 0; transform: translateZ(0px); left: 0px; top: 0px;"><div style="overflow: hidden;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"></div></div></div><div class="gm-style-pbc" style="position: absolute; left: 0px; top: 0px; z-index: 2; width: 100%; height: 100%; transition-duration: 0.3s; opacity: 0; display: none;"><p class="gm-style-pbt">Use two fingers to move the map</p></div><div style="position: absolute; left: 0px; top: 0px; z-index: 3; width: 100%; height: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 4; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a target="_blank" href="https://maps.google.com/maps?ll=40.712675,-74.006277&amp;z=10&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3" title="Click to see this area on Google Maps" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 66px; height: 26px; cursor: pointer;"><img src="./proj_files/google4.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></a></div><div style="padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 0px; position: absolute; left: 209px; top: 5px; background-color: white;"><div style="padding: 0px 0px 10px; font-size: 16px;">Map Data</div><div style="font-size: 13px;"></div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img src="./proj_files/mapcnt6.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 151px; bottom: 0px; width: 12px;"><div draggable="false" class="gm-style-cc" style="-webkit-user-select: none; height: 14px; line-height: 14px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer; display: none;">Map Data</a><span style="display: none;"></span></div></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);"></div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; -webkit-user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a href="https://www.google.com/intl/en-US_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Terms of Use</a></div></div><div style="width: 25px; height: 25px; overflow: hidden; display: none; margin: 10px 14px; position: absolute; top: 0px; right: 0px;"><img src="./proj_files/sv5.png" draggable="false" class="gm-fullscreen-control" style="position: absolute; left: -52px; top: -86px; width: 164px; height: 112px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div draggable="false" class="gm-style-cc" style="-webkit-user-select: none; height: 14px; line-height: 14px; display: none; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a target="_new" title="Report errors in the road map or imagery to Google" href="https://www.google.com/maps/@40.712675,-74.006277,10z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Report a map error</a></div></div><div class="gmnoprint gm-bundled-control" draggable="false" controlwidth="28" controlheight="55" style="margin: 10px; -webkit-user-select: none; position: absolute; left: 0px; top: 0px;"><div class="gmnoprint" controlwidth="28" controlheight="55" style="position: absolute; left: 0px; top: 0px;"><div draggable="false" style="-webkit-user-select: none; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; width: 28px; height: 55px; background-color: rgb(255, 255, 255);"><div title="Zoom in" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="./proj_files/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: 0px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div></div><div style="position: relative; overflow: hidden; width: 67%; height: 1px; left: 16%; top: 0px; background-color: rgb(230, 230, 230);"></div><div title="Zoom out" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="./proj_files/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: -15px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div></div></div></div></div><div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false" controlwidth="0" controlheight="0" style="margin: 10px; -webkit-user-select: none; position: absolute; display: none; bottom: 14px; right: 0px;"><div class="gmnoprint" controlwidth="28" controlheight="0" style="display: none; position: absolute;"><div title="Rotate map 90 degrees" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; cursor: pointer; display: none; background-color: rgb(255, 255, 255);"><img src="./proj_files/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: 6px; width: 170px; height: 54px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gm-tilt" style="width: 0px; height: 0px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; top: 0px; cursor: pointer; background-color: rgb(255, 255, 255);"><img src="./proj_files/tmapctrl4.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 170px; height: 54px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div><div draggable="false" class="gm-style-cc" style="position: absolute; -webkit-user-select: none; height: 14px; line-height: 14px; right: 72px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><span>5 km&nbsp;</span><div style="position: relative; display: inline-block; height: 8px; bottom: -1px; width: 43px;"><div style="width: 100%; height: 4px; position: absolute; left: 0px; top: 0px; background-color: rgb(255, 255, 255);"></div><div style="width: 4px; height: 8px; left: 0px; top: 0px; background-color: rgb(255, 255, 255);"></div><div style="width: 4px; height: 8px; position: absolute; left: 0px; bottom: 0px; background-color: rgb(255, 255, 255);"></div><div style="position: absolute; height: 2px; left: 1px; bottom: 1px; right: 1px; background-color: rgb(102, 102, 102);"></div><div style="position: absolute; width: 2px; height: 6px; left: 1px; top: 1px; background-color: rgb(102, 102, 102);"></div><div style="width: 2px; height: 6px; position: absolute; bottom: 1px; right: 1px; background-color: rgb(102, 102, 102);"></div></div></div></div></div></div>
+                        <div align="center" style="overflow:hidden;height:auto;width:100%;float:left;">
+                            <div id="gmap_canvas" align="top" style="height: 600px; width: 960px; position: relative; overflow: hidden; transform: translateZ(0px); background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0; cursor: url(&quot;http://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 234px; top: 126px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 490px; top: 126px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 490px; top: -130px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 234px; top: -130px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 234px; top: 382px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 490px; top: 382px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -22px; top: 126px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 746px; top: 126px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -22px; top: 382px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 746px; top: -130px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -22px; top: -130px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 746px; top: 382px;"></div></div></div></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 234px; top: 126px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 490px; top: 126px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 490px; top: -130px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 234px; top: -130px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 234px; top: 382px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 490px; top: 382px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -22px; top: 126px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 746px; top: 126px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -22px; top: 382px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 746px; top: -130px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -22px; top: -130px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 746px; top: 382px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="transform: translateZ(0px); position: absolute; left: 234px; top: 126px; transition: opacity 200ms ease-out;"><img src="./proj_files/kh" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; z-index: 0;"><img src="./proj_files/vt" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; z-index: 1;"></div><div style="transform: translateZ(0px); position: absolute; left: 490px; top: 126px; transition: opacity 200ms ease-out;"><img src="./proj_files/kh(1)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; z-index: 0;"><img src="./proj_files/vt(1)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; z-index: 1;"></div><div style="transform: translateZ(0px); position: absolute; left: 490px; top: -130px; transition: opacity 200ms ease-out;"><img src="./proj_files/kh(2)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; z-index: 0;"><img src="./proj_files/vt(2)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; z-index: 1;"></div><div style="transform: translateZ(0px); position: absolute; left: 234px; top: -130px; transition: opacity 200ms ease-out;"><img src="./proj_files/kh(3)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; z-index: 0;"><img src="./proj_files/vt(3)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; z-index: 1;"></div><div style="transform: translateZ(0px); position: absolute; left: 234px; top: 382px; transition: opacity 200ms ease-out;"><img src="./proj_files/kh(4)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; z-index: 0;"><img src="./proj_files/vt(4)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; z-index: 1;"></div><div style="transform: translateZ(0px); position: absolute; left: -22px; top: 126px; transition: opacity 200ms ease-out;"><img src="./proj_files/kh(5)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; z-index: 0;"><img src="./proj_files/vt(5)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; z-index: 1;"></div><div style="transform: translateZ(0px); position: absolute; left: 490px; top: 382px; transition: opacity 200ms ease-out;"><img src="./proj_files/kh(6)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; z-index: 0;"><img src="./proj_files/vt(6)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; z-index: 1;"></div><div style="transform: translateZ(0px); position: absolute; left: 746px; top: 126px; transition: opacity 200ms ease-out;"><img src="./proj_files/kh(7)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; z-index: 0;"><img src="./proj_files/vt(7)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; z-index: 1;"></div><div style="transform: translateZ(0px); position: absolute; left: 746px; top: -130px; transition: opacity 200ms ease-out;"><img src="./proj_files/kh(8)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; z-index: 0;"><img src="./proj_files/vt(8)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; z-index: 1;"></div><div style="transform: translateZ(0px); position: absolute; left: -22px; top: 382px; transition: opacity 200ms ease-out;"><img src="./proj_files/kh(9)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; z-index: 0;"><img src="./proj_files/vt(9)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; z-index: 1;"></div><div style="transform: translateZ(0px); position: absolute; left: -22px; top: -130px; transition: opacity 200ms ease-out;"><img src="./proj_files/kh(10)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; z-index: 0;"><img src="./proj_files/vt(10)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; z-index: 1;"></div><div style="transform: translateZ(0px); position: absolute; left: 746px; top: 382px; transition: opacity 200ms ease-out;"><img src="./proj_files/kh(11)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; z-index: 0;"><img src="./proj_files/vt(11)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; z-index: 1;"></div></div></div></div><div class="gm-style-pbc" style="position: absolute; left: 0px; top: 0px; z-index: 2; width: 100%; height: 100%; transition-duration: 0.3s; opacity: 0; display: none;"><p class="gm-style-pbt">Use two fingers to move the map</p></div><div style="position: absolute; left: 0px; top: 0px; z-index: 3; width: 100%; height: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 4; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a target="_blank" href="https://maps.google.com/maps?ll=36.885425,-76.305765&amp;z=16&amp;t=h&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3" title="Click to see this area on Google Maps" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 66px; height: 26px; cursor: pointer;"><img src="./proj_files/google_white5.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></a></div><div style="padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 330px; top: 210px; background-color: white;"><div style="padding: 0px 0px 10px; font-size: 16px;">Map Data</div><div style="font-size: 13px;">Map data ©2016 Google  Imagery ©2016 , Commonwealth of Virginia, DigitalGlobe, U.S. Geological Survey, USDA Farm Service Agency</div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img src="./proj_files/mapcnt6.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 167px; bottom: 0px; width: 606px;"><div draggable="false" class="gm-style-cc" style="-webkit-user-select: none; height: 14px; line-height: 14px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer; display: none;">Map Data</a><span style="">Map data ©2016 Google  Imagery ©2016 , Commonwealth of Virginia, DigitalGlobe, U.S. Geological Survey, USDA Farm Service Agency</span></div></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Map data ©2016 Google  Imagery ©2016 , Commonwealth of Virginia, DigitalGlobe, U.S. Geological Survey, USDA Farm Service Agency</div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; -webkit-user-select: none; height: 14px; line-height: 14px; position: absolute; right: 95px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a href="https://www.google.com/intl/en-US_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Terms of Use</a></div></div><div style="width: 25px; height: 25px; overflow: hidden; display: none; margin: 10px 14px; position: absolute; top: 0px; right: 0px;"><img src="./proj_files/sv5.png" draggable="false" class="gm-fullscreen-control" style="position: absolute; left: -52px; top: -86px; width: 164px; height: 112px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div draggable="false" class="gm-style-cc" style="-webkit-user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a target="_new" title="Report errors in the road map or imagery to Google" href="https://www.google.com/maps/@36.8854254,-76.3057648,16z/data=!3m1!1e3!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Report a map error</a></div></div><div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false" controlwidth="28" controlheight="93" style="margin: 10px; -webkit-user-select: none; position: absolute; bottom: 107px; right: 28px;"><div class="gmnoprint" controlwidth="28" controlheight="55" style="position: absolute; left: 0px; top: 38px;"><div draggable="false" style="-webkit-user-select: none; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; width: 28px; height: 55px; background-color: rgb(255, 255, 255);"><div title="Zoom in" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="./proj_files/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: 0px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div></div><div style="position: relative; overflow: hidden; width: 67%; height: 1px; left: 16%; top: 0px; background-color: rgb(230, 230, 230);"></div><div title="Zoom out" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="./proj_files/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: -15px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div></div></div></div><div class="gm-svpc" controlwidth="28" controlheight="28" style="box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-radius: 2px; width: 28px; height: 28px; cursor: url(&quot;http://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default; position: absolute; left: 0px; top: 0px; background-color: rgb(255, 255, 255);"><div style="position: absolute; left: 1px; top: 1px;"></div><div style="position: absolute; left: 1px; top: 1px;"><div aria-label="Street View Pegman Control" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px;"><img src="./proj_files/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -26px; width: 215px; height: 835px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div aria-label="Pegman is on top of the Map" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./proj_files/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -52px; width: 215px; height: 835px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div aria-label="Street View Pegman Control" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./proj_files/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -78px; width: 215px; height: 835px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div><div class="gmnoprint" controlwidth="28" controlheight="0" style="display: none; position: absolute;"><div title="Rotate map 90 degrees" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; cursor: pointer; display: none; background-color: rgb(255, 255, 255);"><img src="./proj_files/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: 6px; width: 170px; height: 54px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gm-tilt" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; top: 0px; cursor: pointer; background-color: rgb(255, 255, 255);"><img src="./proj_files/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: -13px; width: 170px; height: 54px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div><div class="gmnoprint" style="margin: 10px; z-index: 0; position: absolute; cursor: pointer; left: 0px; top: 0px;"><div class="gm-style-mtc" style="float: left;"><div draggable="false" title="Show street map" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(86, 86, 86); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 8px; border-bottom-left-radius: 2px; border-top-left-radius: 2px; -webkit-background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; min-width: 21px; background-color: rgb(255, 255, 255); background-clip: padding-box;">Map</div><div style="z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; position: absolute; left: 0px; top: 31px; text-align: left; display: none; background-color: white;"><div draggable="false" title="Show street map with terrain" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap; background-color: rgb(255, 255, 255);"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle; background-color: rgb(255, 255, 255);"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img src="./proj_files/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Terrain</label></div></div></div><div class="gm-style-mtc" style="float: left;"><div draggable="false" title="Show satellite imagery" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 8px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; -webkit-background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-left-width: 0px; min-width: 37px; font-weight: 500; background-color: rgb(255, 255, 255); background-clip: padding-box;">Satellite</div><div style="z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; position: absolute; right: 0px; top: 31px; text-align: left; display: none; background-color: white;"><div draggable="false" title="Show imagery with street names" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap; background-color: rgb(255, 255, 255);"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle; background-color: rgb(255, 255, 255);"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden;"><img src="./proj_files/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Labels</label></div></div></div></div></div></div>
+                            <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+                        </div>
+
+                    </div><!--.panel-body-->
+                </div><!--.panel-->
+            </div><!--.col-md-6-->
+        </div><!--.row-->
+    </div>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">Project Demo.</p>
+        </div>
+    </footer>
+	<script src="./proj_files/queue.v1.js"></script>
+<script src="./proj_files/topojson.js"></script>
+<script src="./proj_files/d3.slider.js"></script>
+<link href="./proj_files/nv.d3.css" rel="stylesheet" type="text/css">
+    <script src="./proj_files/nv.d3.js"></script>
+<script src="./proj_files/jquery-2.1.0.min.js"></script>
+    
+    <script src="./proj_files/typeahead.bundle.min.js"></script>
+<script>
+var numbers = new Bloodhound({
+      datumTokenizer: function(d) { 
+          return Bloodhound.tokenizers.whitespace(d.num); 
+      },
+      queryTokenizer: Bloodhound.tokenizers.whitespace,
+      local: [
+{ num: '18TH CENTURY BRITISH LIT'},
+{ num: '20TH CENTURY DICTATORSHIPS'},
+{ num: 'ABA: ASSESS & INTERVENT'},
+{ num: 'ABA: EMPIRICAL BASES'},
+{ num: 'ABNORMAL GYNECOLOGICAL CYTO'},
+{ num: 'ABNORMAL PSYCHOLOGY'},
+{ num: 'ABSTRACT ALGEBRA'},
+{ num: 'ACADEMIC SUCCESS'},
+{ num: 'ACCOUNTING INFORMATION SYSTEMS'},
+{ num: 'ACCT/AUDIT PUBLIC NONPROF SECT'},
+{ num: 'ACCT/AUDIT PUBLIC/NONPROF SECT'},
+{ num: 'ACTING FOR THE CAMERA'},
+{ num: 'ACTING ONE'},
+{ num: 'ACTING TWO'},
+{ num: 'ADAPTED PHYSICAL EDUCATION'},
+{ num: 'ADDICTIVE DISORDERS'},
+{ num: 'ADM THEORY: PROCESS OF PUB ADM'},
+{ num: 'ADMIN LEADERSHIP/PROF DEVELOP'},
+{ num: 'ADMIN/MGMT-NUCLEAR MED TECH'},
+{ num: 'ADULT HEALTH 1'},
+{ num: 'ADULT HEALTH NURSING II'},
+{ num: 'ADULT HEALTH NURSING III'},
+{ num: 'ADV BUS ANALYTICS/BIG DATA APS'},
+{ num: 'ADV CARDIOVASCULAR EX PHYS'},
+{ num: 'ADV CHEMICAL OCEANOGRAPHY'},
+{ num: 'ADV CHINESE LANG/CULTURE II'},
+{ num: 'ADV CLASS MGMT/PRACTICM PREK-6'},
+{ num: 'ADV CLIN APP MOLEC DIAGNOSTICS'},
+{ num: 'ADV CLIN EXTERN SPCH-LANG PATH'},
+{ num: 'ADV COUNSELING SUPERVISION'},
+{ num: 'ADV DATA STRUCTURES/ALGORITHMS'},
+{ num: 'ADV DIGITAL DESIGN AND FPGA'},
+{ num: 'ADV EAR TRAIN/SIGHT SING/DICTA'},
+{ num: 'ADV GEN CHEM I AND II LAB'},
+{ num: 'ADV GRADUATE STUDIO'},
+{ num: 'ADV INSTRCTNL DESIGN TECHNIQUE'},
+{ num: 'ADV INSTRUMENTAL CONDUCTING'},
+{ num: 'ADV JAPANESE LANG & CULTURE II'},
+{ num: 'ADV MOLEC DIAGNOSTICS LAB'},
+{ num: 'ADV ORGANIC CHEM LAB'},
+{ num: 'ADV ORTHO EVAL AND REHAB'},
+{ num: 'ADV QUANT TECH IN CRIM & CJ'},
+{ num: 'ADV SEMINAR IN FEMINIST THEORY'},
+{ num: 'ADV STAT MODELS-BUS RESEARCH'},
+{ num: 'ADV STAT TECHNIQUE FOR I S'},
+{ num: 'ADV SUPERVISED PRACT-COUNSELNG'},
+{ num: 'ADV TECHNICAL ANALYSIS'},
+{ num: 'ADVANCED AIKIDO'},
+{ num: 'ADVANCED CERAMICS'},
+{ num: 'ADVANCED CHORAL CONDUCTING'},
+{ num: 'ADVANCED CIRCUIT ANALYSIS'},
+{ num: 'ADVANCED COMPOSITION'},
+{ num: 'ADVANCED CONCEPTS FOR SECONDAR'},
+{ num: 'ADVANCED COUN & PSYCHOTHER TEC'},
+{ num: 'ADVANCED ECON ANALYSIS: MACRO'},
+{ num: 'ADVANCED ERGONOMICS'},
+{ num: 'ADVANCED FICTION WORKSHOP'},
+{ num: 'ADVANCED FILMMAKING'},
+{ num: 'ADVANCED GEOLOGICAL SCIENCES'},
+{ num: 'ADVANCED GRAMMAR & SYNTAX'},
+{ num: 'ADVANCED GRAMMAR REVIEW'},
+{ num: 'ADVANCED HEMATOLOGY'},
+{ num: 'ADVANCED HEMATOLOGY LAB'},
+{ num: 'ADVANCED KARATE'},
+{ num: 'ADVANCED MANAGEMENT SCIENCE'},
+{ num: 'ADVANCED MECHANICS OF SOLIDS'},
+{ num: 'ADVANCED MERCHANDISING'},
+{ num: 'ADVANCED PRINTMAKING'},
+{ num: 'ADVANCED QUALITATIVE RESEARCH'},
+{ num: 'ADVANCED SCULPTURE'},
+{ num: 'ADVANCED SEMINAR I'},
+{ num: 'ADVANCED SEMINAR II'},
+{ num: 'ADVANCED STAT INFERENCE II'},
+{ num: 'ADVANCED THEORY'},
+{ num: 'ADVERTISING AND PROMOTION'},
+{ num: 'ADVERTISING STRATEGY'},
+{ num: 'AEROBICS I'},
+{ num: 'AFRICA IN TRANSITION'},
+{ num: 'AFRICAN AMERICAN LITERATURE'},
+{ num: 'AFRICANA INTELL THGT & ECO DEV'},
+{ num: 'AFRICAN-AMERICAN LITERATURE'},
+{ num: 'AGENT-BASED SIMULATION MODELNG'},
+{ num: 'AGILE PROJECT MANAGEMENT'},
+{ num: 'AIR QUALITY'},
+{ num: 'ALGEBRA/FUNCTIONS MATH SPEC'},
+{ num: 'AMER CONST LAW & POLITICS II'},
+{ num: 'AMER FOR POL AND WORL ORDER'},
+{ num: 'AMER REVOLUTION & HIST MEMORY'},
+{ num: 'AMER WRITERS, AMER EXPERIENCES'},
+{ num: 'AMERICAN FOREIGN POLICY'},
+{ num: 'AMERICAN LITERATURE SINCE 1860'},
+{ num: 'AMERICAN LITERATURE TO 1860'},
+{ num: 'AMERICAN MILITARY HISTORY'},
+{ num: 'AMERICAN NAVAL HISTORY'},
+{ num: 'AMPHIBIOUS WARFARE'},
+{ num: 'AN INTRODUCTION TO SOCIOLOGY'},
+{ num: 'ANALYSIS FOR M&S'},
+{ num: 'ANALYSIS-ORGANIZATION SYSTEMS'},
+{ num: 'ANALYTICAL CHEMISTRY LAB'},
+{ num: 'ANALYTICAL CHEMISTRY LECTURE'},
+{ num: 'ANALYTICAL MECHANICS'},
+{ num: 'ANATOMICAL KINESIOLOGY'},
+{ num: 'ANCIENT AND MEDIEVAL ART'},
+{ num: 'ANCIENT ROME'},
+{ num: 'ANIMAL BEHAVIOR'},
+{ num: 'ANIMAL BEHAVIOR LAB'},
+{ num: 'ANIMATION'},
+{ num: 'ANOVA APPLIED TO EDUC RESEARCH'},
+{ num: 'APPL STATS/DATA IN EDUCATION'},
+{ num: 'APPLIED ANALOG/DIGITAL CONTROL'},
+{ num: 'APPLIED COMPLEX VARIABLES'},
+{ num: 'APPLIED FUNCTIONAL ANALYSIS'},
+{ num: 'APPLIED LEADERSHIP'},
+{ num: 'APPLIED LEADERSHIP LAB'},
+{ num: 'APPLIED MATH I: BIOMATHEMATICS'},
+{ num: 'APPLIED NUMERICAL METHODS II'},
+{ num: 'APPLIED RESEARCH IN EDUCATION'},
+{ num: 'APPLIED SOCIAL STATISTICS'},
+{ num: 'APPROACHES TO COLLECTIVE SECUR'},
+{ num: 'AQUATIC CHEM-ENVIRON ENGINEER'},
+{ num: 'ART CRITICISM'},
+{ num: 'ASIAN ART'},
+{ num: 'ASPECTS OF ENGLISH LANGUAGE'},
+{ num: 'ASSEMBLAGE'},
+{ num: 'ASSESS/DOCMTN-THER RECREATION'},
+{ num: 'ASSESSMENT & EVAL OF STU LRNG'},
+{ num: 'ASSISTIVE TECHNOLOGY'},
+{ num: 'ATHLETIC TRAINING PRACTICUM II'},
+{ num: 'ATHLETIC TRAINING PRACTICUM IV'},
+{ num: 'ATHLETIC TRAINING RESEARCH I'},
+{ num: 'ATHLETIC TRAINING RESEARCH III'},
+{ num: 'AURAL REHABILITATION I'},
+{ num: 'AUTONOMOUS VEHICLES/URBAN TRAN'},
+{ num: 'BALLET TECHNIQUE 1'},
+{ num: 'BALLET TECHNIQUE 2'},
+{ num: 'BALLET TECHNIQUE 3'},
+{ num: 'BALLET TECHNIQUE 4'},
+{ num: 'BALLET TECHNIQUE 5'},
+{ num: 'BALLROOM DANCE 1'},
+{ num: 'BALLROOM DANCE 3'},
+{ num: 'BASIC BACTERIOLOGY'},
+{ num: 'BASIC BACTERIOLOGY LAB'},
+{ num: 'BASIC ECONOMICS'},
+{ num: 'BASIC INFO LITERACY & RESEARCH'},
+{ num: 'BASIC MUSICIANSHIP'},
+{ num: 'BEGINNING AIKIDO'},
+{ num: 'BEGINNING FRENCH I'},
+{ num: 'BEGINNING FRENCH II'},
+{ num: 'BEGINNING GERMAN I'},
+{ num: 'BEGINNING GERMAN II'},
+{ num: 'BEGINNING GOLF'},
+{ num: 'BEGINNING ITALIAN II'},
+{ num: 'BEGINNING JUDO'},
+{ num: 'BEGINNING KARATE'},
+{ num: 'BEGINNING LATIN II'},
+{ num: 'BEGINNING PIANO CLASS'},
+{ num: 'BEGINNING RUSSIAN II'},
+{ num: 'BEGINNING SELF-DEFENSE'},
+{ num: 'BEGINNING SPANISH I'},
+{ num: 'BEGINNING SPANISH II'},
+{ num: 'BEGINNING SWIMMING'},
+{ num: 'BEGINNING VOICE CLASS'},
+{ num: 'BEHAVIORAL & COGNITION ISSUES'},
+{ num: 'BIOCHEMISTRY LABORATORY'},
+{ num: 'BIOCHEMISTRY LECTURE'},
+{ num: 'BIOETHICS'},
+{ num: 'BIOFUELS ENGINEERING'},
+{ num: 'BIOLOG WASTEWATER TREATMENT'},
+{ num: 'BIOLOGICAL ANTHROPOLOGY'},
+{ num: 'BIOLOGY SEMINAR'},
+{ num: 'BIOMECHANICS'},
+{ num: 'BIOMECHANICS LAB'},
+{ num: 'BIOMECHANICS/KINESIOLOGY II'},
+{ num: 'BIOMED ENGR II: APPLICATIONS'},
+{ num: 'BIOMED SCIENCES JOURNAL CLUB'},
+{ num: 'BIOMETRY'},
+{ num: 'BLACK QUEER FEMINISMS'},
+{ num: 'BLACKS, CRIME AND JUSTICE'},
+{ num: 'BOTANY'},
+{ num: 'BOTANY LAB'},
+{ num: 'BRASS CHOIR'},
+{ num: 'BRASS QUINTET'},
+{ num: 'BUS ANALYTICS/BIG DATA APPLIC'},
+{ num: 'BUS GERMAN-LANGUAGE & CULTURE'},
+{ num: 'BUSINESS AND SOCIETY'},
+{ num: 'BUSINESS APPLICATIONS WITH C++'},
+{ num: 'BUSINESS ETHICS'},
+{ num: 'BUSINESS INTELLIGENCE'},
+{ num: 'BUSINESS POLICY AND STRATEGY'},
+{ num: 'BUSINESS SPANISH-LANG & CULTUR'},
+{ num: 'BUSINESS TELECOMM/NETWORKS'},
+{ num: 'BUSINESS, EDUC, & SOC SCI WRTG'},
+{ num: 'CALCULUS FOR BUSN AND ECON'},
+{ num: 'CALCULUS I'},
+{ num: 'CALCULUS II'},
+{ num: 'CALCULUS III'},
+{ num: 'CALCULUS IV: INTRO ANALYSIS'},
+{ num: 'CAMP ADMINISTRATION'},
+{ num: 'CAPSTONE COURSE'},
+{ num: 'CAPSTONE DESIGN II'},
+{ num: 'CAPSTONE RESEARCH PROJECT'},
+{ num: 'CAPSTONE SEMINAR'},
+{ num: 'CAPSTONE SEMINAR-PUBLIC ADMIN'},
+{ num: 'CAREER DEVELOP & APPRAISAL'},
+{ num: 'CAREER EXPLORATION'},
+{ num: 'CE SOILS/HYDRAULICS LAB'},
+{ num: 'CEE EXPERIMENTAL DESIGN'},
+{ num: 'CEE INFO LITERACY AND RSRCH'},
+{ num: 'CELL BIOLOGY'},
+{ num: 'CELLULAR BIOMECHANICS'},
+{ num: 'CHAR AUTISM SPECTRUM DISORDER'},
+{ num: 'CHEMICAL OCEANOGRAPHY'},
+{ num: 'CHEMICAL OCEANOGRAPHY LAB'},
+{ num: 'CHEMISTRY AND BIOCHEM SEMINAR'},
+{ num: 'CHEMISTRY OF THE ENVIRONMENT'},
+{ num: 'CHEMISTRY SEMINAR'},
+{ num: 'CHICK FLICKS'},
+{ num: 'CHILD PSYCHOLOGY'},
+{ num: 'CHRISTIANITY'},
+{ num: 'CIRCUIT ANALYSIS'},
+{ num: 'CIRCUIT ANALYSIS I'},
+{ num: 'CIRCUIT ANALYSIS II'},
+{ num: 'CIVIL 2D CAD'},
+{ num: 'CIVIL ENGN DSGN PROJ/PROF PRAC'},
+{ num: 'CL PRAC-SPCH PATH/AUD'},
+{ num: 'CL PRAC-SPCH PATH/AUD I-II-III'},
+{ num: 'CLASSICAL ELECTRODYNAMICS II'},
+{ num: 'CLASSICAL MECHANICS'},
+{ num: 'CLASSICAL RHETORIC/THEORY BLDG'},
+{ num: 'CLASSROOM INTERACTIONS IN STEM'},
+{ num: 'CLASSROOM MGMT/DISCIPLINE'},
+{ num: 'CLIN EXER TESTING/PRESCRIPTION'},
+{ num: 'CLIN PROC SLP'},
+{ num: 'CLIN SKILLS-NONNURSING MAJORS'},
+{ num: 'CLINICAL BIOCHEMISTRY'},
+{ num: 'CLINICAL HISTOLOGY'},
+{ num: 'CLINICAL IMMUNOLOGY'},
+{ num: 'CLINICAL NUCLEAR MED TECH III'},
+{ num: 'CLINICAL PROBLEM SOLVING II'},
+{ num: 'CLINICAL PROBLEM SOLVING IV'},
+{ num: 'CLINICAL SCIENCES II'},
+{ num: 'CLINICAL SCIENCES IV'},
+{ num: 'CLINICAL SUPERVISION IN PSYCH'},
+{ num: 'CLSRM/BEHAV MGT TECH DVRS NEED'},
+{ num: 'CLSSRM MGMT & PRACT PK-3; PK-6'},
+{ num: 'CM/LNG DEV/INT STR STU SIG DIS'},
+{ num: 'CMPLX SYSTS RISK/VLNRBLTY MGMT'},
+{ num: 'COG PROC/LRN STRAT-SPEC NEEDS'},
+{ num: 'COGNITION & INSTRUCTIONAL DSGN'},
+{ num: 'COGNITIVE DISORDERS'},
+{ num: 'COL ALGEBRA WITH SI RECITATION'},
+{ num: 'COLLABORATION AND TRANSITIONS'},
+{ num: 'COLLEGE ALGEBRA'},
+{ num: 'COLLEGE ALGEBRA WITH SI'},
+{ num: 'COLLEGE-UNIVERSITY PRESIDENCY'},
+{ num: 'COLLEGIUM MUSICUM'},
+{ num: 'COLLOQUIUM'},
+{ num: 'COLLOQUIUM II'},
+{ num: 'COLLOQUIUM IV'},
+{ num: 'COLONIAL/REVOLUTIONARY AMERICA'},
+{ num: 'COLOR'},
+{ num: 'COMM COMPETENCY:SPEAK & LISTEN'},
+{ num: 'COMM COMPETNCE:WRITING/READING'},
+{ num: 'COMM RESEARCH METH I'},
+{ num: 'COMM TECHNOLOGY PROCESSES'},
+{ num: 'COMM/LANG DEV & INTRVNTN STRG'},
+{ num: 'COMMUN COMPET-WRITING/READING'},
+{ num: 'COMMUNICATING OCEAN SCIENCE'},
+{ num: 'COMMUNICATION & CONFLICT MGMT'},
+{ num: 'COMMUNICATION ANALY/CRITICISM'},
+{ num: 'COMMUNICATION AND INFO TECH'},
+{ num: 'COMMUNICATION BTWN THE SEXES'},
+{ num: 'COMMUNICATION SYSTEMS'},
+{ num: 'COMMUNICATION TECHNOLOGY'},
+{ num: 'COMMUNICATION THEORY'},
+{ num: 'COMMUNITY COLL CURRIC/PROG DEV'},
+{ num: 'COMMUNITY COLLEGE LEADERSHIP'},
+{ num: 'COMMUNITY HEALTH NURSING II'},
+{ num: 'COMMUNITY JUSTICE'},
+{ num: 'COMMUNITY ORAL HEALTH PRACTICE'},
+{ num: 'COMMUNITY PARTICIPATION'},
+{ num: 'COMP AND STAT METH BME'},
+{ num: 'COMP ANIMAL PHYSIOLOGY LAB'},
+{ num: 'COMP/STAT METHODS IN BIOMED EN'},
+{ num: 'COMPARATIVE ANIMAL PHYSIOLOGY'},
+{ num: 'COMPARATIVE HIGHER ED SYSTEMS'},
+{ num: 'COMPARATIVE INTERNATIONAL MGMT'},
+{ num: 'COMPUTA ENVIRON FLUID DYNAMICS'},
+{ num: 'COMPUTATIONAL METH & SOFTWARE'},
+{ num: 'COMPUTATIONAL METH-MECH ENGIN'},
+{ num: 'COMPUTER AIDED DRAFTING'},
+{ num: 'COMPUTER ARCHITECTURE'},
+{ num: 'COMPUTER ARCHITECTURE FNDMNTLS'},
+{ num: 'COMPUTER ENGINEERING DESIGN I'},
+{ num: 'COMPUTER SOLID MODELING'},
+{ num: 'COMPUTER-AIDED CIRCUIT SIMULAT'},
+{ num: 'CONCEPTUAL PHYSICS'},
+{ num: 'CONCEPTUAL PHYSICS LAB'},
+{ num: 'CONCERT CHOIR'},
+{ num: 'CONCRETE DESIGN I'},
+{ num: 'CONCRETE DESIGN II'},
+{ num: 'CONGRESS'},
+{ num: 'CONSTRUC-PLANNING/SCHEDULING'},
+{ num: 'CONSULTING SKILLS FOR ID'},
+{ num: 'CONSUMER BEHAVIOR'},
+{ num: 'CONSUMER BEHAVIOR/CRM'},
+{ num: 'CONTEMP ORGANIZATIONS AND MGMT'},
+{ num: 'CONTEMPORARY CLASSICS'},
+{ num: 'CONVERSATIONAL JAPANESE FOR ST'},
+{ num: 'COOPERATIVE EDUCATION'},
+{ num: 'COORDINATION AND TRANSITION ME'},
+{ num: 'COST ESTIMATION/FINAN ANALYSIS'},
+{ num: 'COSTUME CRAFTS'},
+{ num: 'COUN FOR LIFESPAN DEVELOPMENT'},
+{ num: 'COUNSELING & PSYTPY TECHNIQUES'},
+{ num: 'COUNSELING CHILDREN & ADOLSCNT'},
+{ num: 'COURTROOM AS A SOCIAL SYSTEM'},
+{ num: 'CRAFTS I METALSMITH & JEWELRY'},
+{ num: 'CRAFTS I: FIBERS'},
+{ num: 'CRAFTS II METALSMITH & JEWELRY'},
+{ num: 'CRAFTS II: FIBERS'},
+{ num: 'CRAFTS III METALSMITH & JEWEL'},
+{ num: 'CRAFTS III:  FIBERS'},
+{ num: 'CRAFTS III: FIBERS'},
+{ num: 'CREATIVE NONFICTION'},
+{ num: 'CREATIVE WRITING'},
+{ num: 'CRIME AND THE COMMUNITY'},
+{ num: 'CRIME, SOCIETY & THE MEDIA'},
+{ num: 'CRIME, SOCIETY AND THE MEDIA'},
+{ num: 'CRIMINOLOGICAL THEORY'},
+{ num: 'CRIT METHODS & DIGITAL COMM'},
+{ num: 'CRITICAL DESIGN'},
+{ num: 'CRITICAL ISSUES CURRIC RES'},
+{ num: 'CRITICAL ISSUES II'},
+{ num: 'CULTURAL GEOGRAPHY'},
+{ num: 'CURR ISSUES COUNS & COUNS EDUC'},
+{ num: 'CURRENT RESEARCH ATHL TRNG'},
+{ num: 'CYBERCRIME AND CYBERSECURITY'},
+{ num: 'CYTOLOGY INTERNSHIP I'},
+{ num: 'DANCE AND ITS AUDIENCE'},
+{ num: 'DANCE HISTORY  1900-PRESENT'},
+{ num: 'DATA COLLECT/ANALYS IN OCENGRP'},
+{ num: 'DATABASE DEPLOY/PERF TUNING'},
+{ num: 'DATABASE MANAGEMENT SYSTEMS'},
+{ num: 'DECISION TECHNIQUES-ENGINEERNG'},
+{ num: 'DENTAL HYG THERAPIES/PRACTICE'},
+{ num: 'DENTAL HYGIENE SERVICES II'},
+{ num: 'DENTAL HYGIENE SERVICES V'},
+{ num: 'DENTAL HYGIENE THEORY II'},
+{ num: 'DENTAL HYGIENE THEORY V'},
+{ num: 'DESIGN & MOD OF AUTO ROB SYST'},
+{ num: 'DESIGN OF NETWORK PROTOCOLS'},
+{ num: 'DESIGN PORTFOLIO'},
+{ num: 'DESIGN SYSTEMS'},
+{ num: 'DESIGN/ANALYSIS OF EXPERIMENTS'},
+{ num: 'DEV INST STRAT PK6-LANG ARTS'},
+{ num: 'DEV INST STRAT-TCH MID/HS ENGL'},
+{ num: 'DEV INSTRUC STRAT PK6-MATH'},
+{ num: 'DEV INSTRUC STRAT PK6-SCIENCE'},
+{ num: 'DEV INSTRUC STRAT PK6-SOC STUD'},
+{ num: 'DEVELOPMENTAL BIOLOGY'},
+{ num: 'DEVELOPMENTAL BIOLOGY LAB'},
+{ num: 'DEVELOPMENTAL PSYCHOLOGY'},
+{ num: 'DEVELOPMENTAL/ECOLOGICAL ASSES'},
+{ num: 'DEVIANT BEHAVIOR'},
+{ num: 'DIAGNOSIS & TREAT PLNG MENT HC'},
+{ num: 'DIAGNOSTIC METHODS-URINALYSIS'},
+{ num: 'DICTION FOR SINGERS'},
+{ num: 'DIGITAL BASICS'},
+{ num: 'DIGITAL CIRCUITS'},
+{ num: 'DIGITAL CIRCUITS LAB'},
+{ num: 'DIGITAL CONTROL SYSTEMS'},
+{ num: 'DIGITAL ELECTRONICS'},
+{ num: 'DIGITAL ELECTRONICS LAB'},
+{ num: 'DIGITAL SIGNAL PROCESSING I'},
+{ num: 'DIGITAL SYSTEM DESIGN'},
+{ num: 'DIGITAL WRITING'},
+{ num: 'DIRECTED RESEARCH SEMINAR'},
+{ num: 'DIRECTING MOVIES'},
+{ num: 'DISABIL/AGING-THERAPEUTIC REC'},
+{ num: 'DISCRETE EVENT SIMULATION'},
+{ num: 'DISCRETE EVENT SIMULATION LAB'},
+{ num: 'DISSERTATION'},
+{ num: 'DISSERTATION SEMINAR'},
+{ num: 'DISTR CENTER AND MATL MGMT'},
+{ num: 'DISTRIBUTION AND MATERIAL MGMT'},
+{ num: 'DIVERSITY ISSUES-HUMAN SERVICE'},
+{ num: 'DIVERSITY PARKS, REC,TOUR STDY'},
+{ num: 'DOCTORAL SEMINAR'},
+{ num: 'DOING BUSINESS IN ASIA'},
+{ num: 'DOING BUSINESS IN LATIN AMER'},
+{ num: 'DRAWING:  STUDIO'},
+{ num: 'DRAWING: COMPOSITION'},
+{ num: 'DRUGS AND BEHAVIOR'},
+{ num: 'DYNAMIC SYSTEMS AND CONTROL'},
+{ num: 'DYNAMICS'},
+{ num: 'EAR TRAIN/SIGHT SING/DICTATION'},
+{ num: 'EARTH SCIENCE'},
+{ num: 'EARTH STRUCT DESIGN W/GEOSYN'},
+{ num: 'ECE SENIOR DESIGN II'},
+{ num: 'ECOLOGY'},
+{ num: 'ECONOMETRICS II'},
+{ num: 'EDITING AND DOCUMENT DESIGN'},
+{ num: 'EDITORIAL DESIGN'},
+{ num: 'EDUCATION IN ATHLETIC TRAINING'},
+{ num: 'EDUCATIONAL FINANCE'},
+{ num: 'ELEC ENGINEERING DESIGN I'},
+{ num: 'ELECTRICAL CIRCUITS I'},
+{ num: 'ELECTROMAGNETICS'},
+{ num: 'ELECTROMAGNETISM'},
+{ num: 'ELECTROMAGNETISM II'},
+{ num: 'ELECTRONIC CIRCUITS'},
+{ num: 'ELECTRONIC DEVICES & CIRCTS II'},
+{ num: 'ELECTRONIC MUSIC'},
+{ num: 'ELECTRONICS & INSTRUMENTS'},
+{ num: 'ELECTRONICS LABORATORY'},
+{ num: 'ELEM ART EDUC MTHD CLSSRM MGMT'},
+{ num: 'ELEMENTARY STATISTICS'},
+{ num: 'ELEMENTS OF ASTROPHYSICS'},
+{ num: 'EMPIRICAL RESEARCH/DESIGN METH'},
+{ num: 'EMPLOYEE RELATIONS'},
+{ num: 'EMPLOYMENT LAW'},
+{ num: 'ENERGY AND THE ENVIRONMENT'},
+{ num: 'ENG MECH II-SOLID MECHANICS'},
+{ num: 'ENGINEERING ANALYSIS III'},
+{ num: 'ENGINEERING ECONOMICS'},
+{ num: 'ENGINEERING MATHEMATICS'},
+{ num: 'ENGINEERING MECH I-STATICS'},
+{ num: 'ENGINEERING OPTIMIZATION'},
+{ num: 'ENGINEERING OPTIMIZATION I'},
+{ num: 'ENGINEERING SOFTWARE DESIGN'},
+{ num: 'ENGLISH COMPOSITION'},
+{ num: 'ENGLISH LINGUISTICS'},
+{ num: 'ENGLISH PEDAGOGY SEMINAR'},
+{ num: 'ENGN TECH INFO LIT/RESEARCH'},
+{ num: 'ENTOMOLOGY'},
+{ num: 'ENTOMOLOGY LAB'},
+{ num: 'ENTREPRENEURIAL ENGRG MANAGER'},
+{ num: 'ENTREPRENEURSHIP'},
+{ num: 'ENTREPREN-NEW VENTURE CREATION'},
+{ num: 'ENVIRON HEALTH SENIOR SEMINAR'},
+{ num: 'ENVIRONMENT AND MAN'},
+{ num: 'ENVIRONMENT AND MAN LAB'},
+{ num: 'ENVIRONMENTAL CHEMISTRY'},
+{ num: 'ENVIRONMENTAL COMMUNICATION'},
+{ num: 'ENVIRONMENTAL CONTROL'},
+{ num: 'ENVIRONMENTAL ETHICS'},
+{ num: 'ENVIRONMENTAL GEOGRAPHY'},
+{ num: 'ENVIRONMENTAL POLITICS'},
+{ num: 'EPIDEMIOLOGY & BIOSTATISTICS'},
+{ num: 'ERGORENIC AIDS IN SPORT/HUMAN'},
+{ num: 'ESPIONAGE AND INTELLIGENCE'},
+{ num: 'ESSENTIALS OF PRO TOOLS'},
+{ num: 'ETHICS & SOCIAL ISSUES IN ADMN'},
+{ num: 'ETHICS AND MORALITY IN SPORT'},
+{ num: 'ETHICS PHILOSOPHY ENGINEERING'},
+{ num: 'ETHICS-PUBLIC ADMINISTRATION'},
+{ num: 'ETHNOBOTANY'},
+{ num: 'EUROPE IN WORLD AFFAIRS'},
+{ num: 'EVOLUTION'},
+{ num: 'EVOLUTION OF MODERN SCIENCE'},
+{ num: 'EXER PRESCRIP-CHRONIC DISEASE'},
+{ num: 'EXER TESTING-NORM/SPEC POPULAT'},
+{ num: 'EXER TEST-NORM/SPEC POP LAB'},
+{ num: 'EXERCISE PHYSIOLOGY'},
+{ num: 'EXERCISE PHYSIOLOGY I'},
+{ num: 'EXERCISE PHYSIOLOGY II'},
+{ num: 'EXERCISE SCIENCE SEMINAR'},
+{ num: 'EXPERIMENTAL PHYSICAL CHEM II'},
+{ num: 'EXPLORE ENGINEERING TECHNOLOGY'},
+{ num: 'EXPLORE ENGNRNG TECHNOLOGY REC'},
+{ num: 'FAMILY GUIDANCE'},
+{ num: 'FAMILY SYSTEMS & FAM DEVELPMNT'},
+{ num: 'FASCISM AND NAZISM'},
+{ num: 'FASHION MARKET RESEARCH'},
+{ num: 'FASHION MARKET TRIP'},
+{ num: 'FASHION PRODUCT DEVELOPMENT'},
+{ num: 'FASHION-TEXTILE-CONSTRUC ANALY'},
+{ num: 'FDTN & CONTEMP ISSUES-ECE'},
+{ num: 'FDTN SP ED:LEGAL ASPECTS/CHARS'},
+{ num: 'FEATURE STORY WRITING'},
+{ num: 'FEMINIST FOUNDATIONS'},
+{ num: 'FEMINIST THEORY'},
+{ num: 'FESTIVAL & EVENT MANAGEMENT'},
+{ num: 'FICTION WORKSHOP'},
+{ num: 'FIELD OBSERVATION HUMAN SERV'},
+{ num: 'FIGURE DRAWING ANATOMY'},
+{ num: 'FIGURE DRAWING/COMPOSITION'},
+{ num: 'FILM & TV GENRES:  FILM NOIR'},
+{ num: 'FILM & TV GENRES:  HORROR'},
+{ num: 'FILM APPRECIATION'},
+{ num: 'FINANCE AND RISK MGMT IN REC'},
+{ num: 'FINANCIAL ACCOUNTING'},
+{ num: 'FINANCIAL AUDITING'},
+{ num: 'FINANCIAL DECISION MAKING'},
+{ num: 'FINANCIAL MANAGEMENT'},
+{ num: 'FINANCIAL STATEMENT ANALYSIS'},
+{ num: 'FIRST/SECOND LANG ACQUISITION'},
+{ num: 'FISCAL PLAN/MGMT-SPORT & REC'},
+{ num: 'FLIGHT MECHANICS'},
+{ num: 'FLUID DYNAMICS & AERODYNAMICS'},
+{ num: 'FLUID MECHANICS'},
+{ num: 'FLUID MECHANICS LABORATORY'},
+{ num: 'FNDTNS EDUC & INSTR ASSESS'},
+{ num: 'FNDTNS OF DISTANCE EDUCATION'},
+{ num: 'FORM AND ANALYSIS'},
+{ num: 'FOUND OF CAREER DEVELOPMENT'},
+{ num: 'FOUND OF MILITARY PROFESSION'},
+{ num: 'FOUND OF MUSIC EDUCATION'},
+{ num: 'FOUNDATION ENGINEERING'},
+{ num: 'FOUNDATIONS & ASSESSMENT OF ED'},
+{ num: 'FOUNDATIONS OF CHEM I LAB'},
+{ num: 'FOUNDATIONS OF CHEM I LECTURE'},
+{ num: 'FOUNDATIONS OF CHEM I REC'},
+{ num: 'FOUNDATIONS OF CHEM II LAB'},
+{ num: 'FOUNDATIONS OF CHEM II LECTURE'},
+{ num: 'FOUNDATIONS OF CHEM II REC'},
+{ num: 'FOUNDATIONS OF ED, PE & HLTH'},
+{ num: 'FOUNDATIONS OF GROUP COMM'},
+{ num: 'FOUNDATN-PARKS, REC, TOURISM'},
+{ num: 'FREEDOM, RIGHTS & REVOLUTION'},
+{ num: 'FRENCH LITERARY FORMS: THEATER'},
+{ num: 'FUEL CELL PRIN, FABRI & EVALUA'},
+{ num: 'FUEL CELL PRIN,FABRI & EVALUA'},
+{ num: 'FUND COMPUTER ENGINEERING LAB'},
+{ num: 'FUND CONCEPTS OF GEOMETRY'},
+{ num: 'FUND GRWTH/DEV BRTH-ADLSNC'},
+{ num: 'FUNDAMENTAL CIRCUITS LAB'},
+{ num: 'FUNDAMENTAL CIRCUITS REC'},
+{ num: 'FUNDAMENTALS OF COMPUTER ENGN'},
+{ num: 'FUNDAMENTALS OF DRAWING'},
+{ num: 'FUNDAMENTALS OF PAINTING'},
+{ num: 'FUNDAMENTALS OF WELDING ENGN'},
+{ num: 'FUNDAMENTALS OF WELDNG ENGN'},
+{ num: 'FUNDAMENTALS-ENGINEERNG REVIEW'},
+{ num: 'GASTRO-INTESTINAL CYTOLOGY'},
+{ num: 'GENERAL BIOLOGY II'},
+{ num: 'GENERAL BIOLOGY II LAB'},
+{ num: 'GENERAL MICROBIOLOGY'},
+{ num: 'GENERAL MICROBIOLOGY LAB'},
+{ num: 'GENERAL VIROLOGY'},
+{ num: 'GENETICS'},
+{ num: 'GEOGRAPH INFO SYS-CIV/ENV ENGN'},
+{ num: 'GEOGRAPHIC INFORMATION SYSTEMS'},
+{ num: 'GEOGRAPHY OF US & CANADA'},
+{ num: 'GEOMETRY'},
+{ num: 'GERMAN SATIRES & PARODIES'},
+{ num: 'GIS IN THE LIFE SCIENCES'},
+{ num: 'GIS MODELING & SIMULATION'},
+{ num: 'GLOBAL BUSINESS'},
+{ num: 'GLOBAL CHG AND AMER FOR POLICY'},
+{ num: 'GLOBAL HIST OF SPORT'},
+{ num: 'GLOBAL POLITICAL ECONOMY'},
+{ num: 'GLOBAL RETAILING'},
+{ num: 'GLOBAL/APPLIED MACROECONOMICS'},
+{ num: 'GOVERNANCE AND ACCOUNTABILITY'},
+{ num: 'GRADUATE SEMINAR'},
+{ num: 'GRADUATE STUDIO'},
+{ num: 'GROUND VEHICLE AERODYNAMICS'},
+{ num: 'GROUNDWATER HYDRAULICS'},
+{ num: 'GROUP COUNSELING & PSYCHOTHRPY'},
+{ num: 'GUI PROGRAMMING WITH C++'},
+{ num: 'GYNECOLOGICAL SCREENING LAB'},
+{ num: 'HAZARDS: NATURAL & TECHNOLOGIC'},
+{ num: 'HEALTH PSYCHOLOGY'},
+{ num: 'HEAT AND MASS TRANSFER'},
+{ num: 'HEBREW BIBLE/OLD TESTAMENT'},
+{ num: 'HEMOSTASIS'},
+{ num: 'HEMOSTASIS LAB'},
+{ num: 'HIGHER EDUCATION LEADERSHIP'},
+{ num: 'HIST-MED, DISEASE, HLTH TECHNO'},
+{ num: 'HISTORICAL GEOGRAPHY'},
+{ num: 'HISTORICAL GEOLOGY'},
+{ num: 'HISTORICAL GEOLOGY LAB'},
+{ num: 'HISTORICAL METHODS'},
+{ num: 'HISTORY OF DECORATIVE ARTS'},
+{ num: 'HISTORY OF JAZZ'},
+{ num: 'HISTORY OF MATHEMATICS'},
+{ num: 'HISTORY OF MODERN AFRICA'},
+{ num: 'HISTORY OF MUSIC'},
+{ num: 'HISTORY OF THE OLD SOUTH'},
+{ num: 'HONORS - THE AMERICAN PAST'},
+{ num: 'HONORS GENERAL BIOLOGY II'},
+{ num: 'HONORS GENERAL BIOLOGY II LAB'},
+{ num: 'HONORS: INTRO TO LITERATURE'},
+{ num: 'HONORS: INTRO TO PHILOSOPHY'},
+{ num: 'HONORS: INTRODUCTION TO ETHICS'},
+{ num: 'HONORS: UNIVERSITY PHYSICS'},
+{ num: 'HONORS: UNIVERSITY PHYSICS LAB'},
+{ num: 'HONORS-INTRO ASTRONOMY LAB'},
+{ num: 'HONORS-INTRO TO VISUAL ARTS'},
+{ num: 'HONORS-INTRODUCTORY ASTRONOMY'},
+{ num: 'HONORS-PUBLIC SPEAKING'},
+{ num: 'HONORS-THE EUROPEAN PAST'},
+{ num: 'HP COMPUTING & SIMULATION'},
+{ num: 'HUMAN ANAT & PHYS II LAB'},
+{ num: 'HUMAN ANATOMY & PHYSIOLOGY II'},
+{ num: 'HUMAN CADAVER DISSECTION'},
+{ num: 'HUMAN COGNITION'},
+{ num: 'HUMAN FACTORS'},
+{ num: 'HUMAN RESOURCES MANAGEMENT'},
+{ num: 'HUMAN SERVICES METHODS'},
+{ num: 'HYDRAULICS AND WATER RESOURCES'},
+{ num: 'HYDROGEOLOGY'},
+{ num: 'HYDROLOGY AND DRAINAGE'},
+{ num: 'HYDROMECHANICS'},
+{ num: 'I/O RESEARCH METHODS'},
+{ num: 'IMMUNOHEMATOLOGY'},
+{ num: 'IMMUNOHEMATOLOGY LABORATORY'},
+{ num: 'IMPLEMENTING INTERNET APPLIC'},
+{ num: 'IMTERMED QUANTUM MECHANICS'},
+{ num: 'IN ENVH:PRINCIPLES OF ENVH'},
+{ num: 'INDEPENDENT STUDY'},
+{ num: 'INDUSTRIAL DESIGN'},
+{ num: 'INDUSTRIAL MATERIALS'},
+{ num: 'INDUSTRIAL/ORGANIZ PSYCHOLOGY'},
+{ num: 'INELASTIC STRUCTURES'},
+{ num: 'INEQUALITY, CRIME, AND JUSTICE'},
+{ num: 'INFECTIOUS DISEASE EPIDEMIOL'},
+{ num: 'INFO LIT & RSRCH FOR MSIM ENGR'},
+{ num: 'INFO LITERACY AND RESEARCH'},
+{ num: 'INFO LITERACY RESEARCH ECE'},
+{ num: 'INFORMATION ARCHITECTURES'},
+{ num: 'INFORMATION LITERACY-HLTH PROF'},
+{ num: 'INFORMATION VISUALIZATION'},
+{ num: 'INFRASTRUCT, HIGHWAY AND EQUIP'},
+{ num: 'INS DSGN II: CURR PROC & IEP'},
+{ num: 'INST STRAT-TCH MIDL/HS SOC STU'},
+{ num: 'INSTR DSGN I:LRNR CHAR/ASSESS'},
+{ num: 'INSTR STRAT/INNO-TRAIN/OCCU ED'},
+{ num: 'INSTR STRTG STDS ACCESS GEN ED'},
+{ num: 'INSTRUCTIONAL INTERNSHIP'},
+{ num: 'INSTRUCTIONAL METHODS IN OTS'},
+{ num: 'INSTRUCTIONAL SYSTEMS DEVELOP'},
+{ num: 'INSTRUMENT ANLYSIS LAB'},
+{ num: 'INSTRUMENTAL ANALYSIS'},
+{ num: 'INSTRUMENTAL ANALYSIS LAB'},
+{ num: 'INSTRUMENTAL ANALYSIS LECTURE'},
+{ num: 'INSTRUMENTATION'},
+{ num: 'INTEGRAL EQUATIONS'},
+{ num: 'INTERMED MACROECONOMICS THEORY'},
+{ num: 'INTERMED MICROECONOMICS THEORY'},
+{ num: 'INTERMED QUANTUM MECHANICS'},
+{ num: 'INTERMEDIATE ACCOUNTING I'},
+{ num: 'INTERMEDIATE ACCOUNTING II'},
+{ num: 'INTERMEDIATE AIKIDO'},
+{ num: 'INTERMEDIATE ARABIC'},
+{ num: 'INTERMEDIATE BIOCHEMISTRY'},
+{ num: 'INTERMEDIATE CERAMICS'},
+{ num: 'INTERMEDIATE CHINESE'},
+{ num: 'INTERMEDIATE FINANCIAL MGMT'},
+{ num: 'INTERMEDIATE FRENCH I'},
+{ num: 'INTERMEDIATE FRENCH II'},
+{ num: 'INTERMEDIATE GERMAN I'},
+{ num: 'INTERMEDIATE GERMAN II'},
+{ num: 'INTERMEDIATE ITALIAN II'},
+{ num: 'INTERMEDIATE JAPANESE II'},
+{ num: 'INTERMEDIATE JUDO'},
+{ num: 'INTERMEDIATE KARATE'},
+{ num: 'INTERMEDIATE LATIN '},
+{ num: 'INTERMEDIATE REAL ANALYSIS II'},
+{ num: 'INTERMEDIATE RUSSIAN II'},
+{ num: 'INTERMEDIATE SELF-DEFENSE'},
+{ num: 'INTERMEDIATE SPANISH I'},
+{ num: 'INTERMEDIATE SPANISH II'},
+{ num: 'INTERMEDIATE SWIMMING'},
+{ num: 'INTERN IN MENTAL HLTH COUNSELG'},
+{ num: 'INTERN/STUDENT TEACH AND SEMIN'},
+{ num: 'INTERNAT/ADV ACCOUNTING ISSUES'},
+{ num: 'INTERNATIONAL BUSIN OPERATIONS'},
+{ num: 'INTERNATIONAL BUSINESS ISSUES'},
+{ num: 'INTERNATIONAL CULTURAL STUDIES'},
+{ num: 'INTERNATIONAL ECONOMICS'},
+{ num: 'INTERNATIONAL FILM HISTORY'},
+{ num: 'INTERNATIONAL LAW'},
+{ num: 'INTERNATIONAL SHIPPING'},
+{ num: 'INTERNATIONAL TRADE'},
+{ num: 'INTERNATL MARITIME TRANSPORT'},
+{ num: 'INTERNATL POLITICAL ECONOMY'},
+{ num: 'INTERNATL STRATEGIC MANAGEMENT'},
+{ num: 'INTERNET GEOGRAPHIC INFO SYS'},
+{ num: 'INTERNSHIP'},
+{ num: 'INTERNSHIP IN COUNSELING'},
+{ num: 'INTERNSHIP IN ED LEADERSHIP'},
+{ num: 'INTERNSHIP SEMINAR'},
+{ num: 'INTERNSHIP-HUMAN SERVICES'},
+{ num: 'INTERPERS COMM THEORY/RESRCH'},
+{ num: 'INTERPERSONAL LIFE SKILLS'},
+{ num: 'INTERPERSONAL SKILLS'},
+{ num: 'INTERPRETING THE AFRICAN PAST'},
+{ num: 'INTERPRETING THE AMERICAN PAST'},
+{ num: 'INTERPRETING THE ASIAN PAST'},
+{ num: 'INTERPRETING THE EUROPEAN PAST'},
+{ num: 'INTERPROF HLTHCARE CLIN PRAC'},
+{ num: 'INTERVENTN/ADVOCACY W/CHILDREN'},
+{ num: 'INTGRTNG INSTR ACROSS CURR K-6'},
+{ num: 'INTL RELAT OF AFRICAN STATES'},
+{ num: 'INTR TO MEDICAL IMAGE ANALYSIS'},
+{ num: 'INTRO AFRICAN AMERICAN STUDIES'},
+{ num: 'INTRO ASTRONOMY LABORATORY'},
+{ num: 'INTRO COMPARATIVE GOV/POLITICS'},
+{ num: 'INTRO COMPUTER ARCHITECTURE I'},
+{ num: 'INTRO COMPUTER ARCHITECTURE II'},
+{ num: 'INTRO DISCRETE-TIME SIGNAL PRC'},
+{ num: 'INTRO FINANCIAL MANAGEMENT'},
+{ num: 'INTRO GENERAL PHYSICS LAB'},
+{ num: 'INTRO HUMAN BIOL LAB'},
+{ num: 'INTRO IMAGE PROC MEDICAL IMAG'},
+{ num: 'INTRO INFO LIT & RSCH FOR SCI'},
+{ num: 'INTRO INFO LIT & RSCH-SCI REC'},
+{ num: 'INTRO INFO LITERACY & RESEARCH'},
+{ num: 'INTRO INFO LITERACY & RSCH REC'},
+{ num: 'INTRO INFO LITRCY & RSRCH REC'},
+{ num: 'INTRO LANG DISORDERS CHILDREN'},
+{ num: 'INTRO NEW MEDIA TECHNOLOGIES'},
+{ num: 'INTRO OCEAN MODELING & PREDICT'},
+{ num: 'INTRO ORGANIC & BIOCHEM LAB'},
+{ num: 'INTRO ORGANIC AND BIOCHEMISTRY'},
+{ num: 'INTRO QUANTUM FIELD THEORY'},
+{ num: 'INTRO SOFTWARE ENGINEERING REC'},
+{ num: 'INTRO STUDENT AFFAIRS ADMIN'},
+{ num: 'INTRO TO AMERICAN POLITICS'},
+{ num: 'INTRO TO BRITISH LITERATURE I'},
+{ num: 'INTRO TO BRITISH LITERATURE II'},
+{ num: 'INTRO TO COASTAL ENGINEERING'},
+{ num: 'INTRO TO CONTEMPORARY BUSINESS'},
+{ num: 'INTRO TO COUNSELING SUPERVSN'},
+{ num: 'INTRO TO CREATIVE WRITING'},
+{ num: 'INTRO TO CRITICAL THEORY'},
+{ num: 'INTRO TO DIGITAL PHOTOGRAPHY'},
+{ num: 'INTRO TO DISCRETE STRUC REC'},
+{ num: 'INTRO TO DISCRETE STRUCTURES'},
+{ num: 'INTRO TO ENGINEERING MGMT'},
+{ num: 'INTRO TO ENGLISH STUDIES'},
+{ num: 'INTRO TO ENTREPRENEURSHIP'},
+{ num: 'INTRO TO EXERCISE SCIENCE'},
+{ num: 'INTRO TO GAME DEVELOPMENT'},
+{ num: 'INTRO TO HUMAN COMMUNICATION'},
+{ num: 'INTRO TO HUMAN SERVICES'},
+{ num: 'INTRO TO INFORMATION SYSTEMS'},
+{ num: 'INTRO TO INTERNATIONL POLITICS'},
+{ num: 'INTRO TO LEADERSHIP'},
+{ num: 'INTRO TO MODERN LATIN AMER LIT'},
+{ num: 'INTRO TO PARALLEL COMPUTING'},
+{ num: 'INTRO TO PRODUCTION DESIGN'},
+{ num: 'INTRO TO PUBLIC RELATIONS'},
+{ num: 'INTRO TO RESEARCH IN EDUCATION'},
+{ num: 'INTRO TO RHETORICAL STUDIES'},
+{ num: 'INTRO TO SOCIAL RESEARCH'},
+{ num: 'INTRO TO SPORT MANAGEMENT'},
+{ num: 'INTRO TO SUBSTANCE ABUSE'},
+{ num: 'INTRO TO SYSTEMS ENGINEERING'},
+{ num: 'INTRO TO THE VISUAL ARTS'},
+{ num: 'INTRODUCTION TO ANTHROPOLOGY'},
+{ num: 'INTRODUCTION TO CERAMICS'},
+{ num: 'INTRODUCTION TO ETHICS'},
+{ num: 'INTRODUCTION TO FILMMAKING'},
+{ num: 'INTRODUCTION TO GAS DYNAMICS'},
+{ num: 'INTRODUCTION TO GLASS'},
+{ num: 'INTRODUCTION TO HUMAN BIOLOGY'},
+{ num: 'INTRODUCTION TO LITERATURE'},
+{ num: 'INTRODUCTION TO PHILOSOPHY'},
+{ num: 'INTRODUCTION TO PSYCHOLOGY'},
+{ num: 'INTRODUCTION TO PUBLIC LAW'},
+{ num: 'INTRODUCTION TO PUBLIC POLICY'},
+{ num: 'INTRODUCTION TO ROBOTICS'},
+{ num: 'INTRODUCTION TO SCULPTURE'},
+{ num: 'INTRODUCTION TO SENIOR PROJECT'},
+{ num: 'INTRODUCTION TO SOLAR CELLS'},
+{ num: 'INTRODUCTION WOMENS STUDIES'},
+{ num: 'INTRODUCTORY CHEMISTRY'},
+{ num: 'INTRODUCTORY CHEMISTRY LAB'},
+{ num: 'INTRODUCTORY DATA ANALYSIS'},
+{ num: 'INTRODUCTORY GENERAL PHYSICS'},
+{ num: 'INTRODUCTORY LINEAR ALGEBRA'},
+{ num: 'INTRODUCTORY OCEANOGRAPHY'},
+{ num: 'INTRODUCTORY OCEANOGRAPHY LAB'},
+{ num: 'INTRO-INTERNAT HIGHER ED ADMIN'},
+{ num: 'INTRO-INTERPERS COMMUNICATION'},
+{ num: 'INTRO-MATH FOR CRITICAL THINK'},
+{ num: 'INTRO-MODELING AND SIMULATION'},
+{ num: 'INTRO-NETWORKS & COMMUNICATION'},
+{ num: 'INTRO-PROBABILITY & STATISTICS'},
+{ num: 'INTRO-SPANISH LIT 1700-PRESENT'},
+{ num: 'INTRO-TECH & SCIENTIF WRITING'},
+{ num: 'INTRO-THEORETICAL COMPUTER SCI'},
+{ num: 'INVERTEBRATE ZOOLOGY'},
+{ num: 'INVERTEBRATE ZOOLOGY LAB'},
+{ num: 'INVESTMENTS'},
+{ num: 'ISLAM'},
+{ num: 'JAZZ DANCE 2'},
+{ num: 'JAZZ DANCE 4'},
+{ num: 'JAZZ ENSEMBLE'},
+{ num: 'JAZZ IMPROVISATION II'},
+{ num: 'JUDICIAL PROCESS AND BEHAVIOR'},
+{ num: 'KINETIC THRY/MESOSCOPIC MTHD I'},
+{ num: 'KNOWING & LEARNING IN STEM ED'},
+{ num: 'LA GRANDE GUERRE:  WWI ON FILM'},
+{ num: 'LABOR MANAGEMENT RELATIONS'},
+{ num: 'LANG ACQ/READ-DIVERSE LRN NEED'},
+{ num: 'LANGUAGE DEV/LANGUAGE DISORDER'},
+{ num: 'LANGUAGE DEVELOPMENT'},
+{ num: 'LAW & CRIMINAL JUSTICE SYSTEM'},
+{ num: 'LAW AND SOCIAL CONTROL'},
+{ num: 'LDRSHP THRY FOR EDUC IMPRVMENT'},
+{ num: 'LEADERSHIP'},
+{ num: 'LEADERSHIP & EVENTS MANAGEMENT'},
+{ num: 'LEADERSHIP & MGMT I'},
+{ num: 'LEADERSHIP & MGMT II'},
+{ num: 'LEADERSHIP FOR SOCIAL JUSTICE'},
+{ num: 'LEAN ENGINEERING'},
+{ num: 'LEAP'},
+{ num: 'LEGAL ASPECTS-REC/SPORT MGMT'},
+{ num: 'LEGAL ENVIRONMENT OF BUSINESS'},
+{ num: 'LETTERPRESS PRINTMAKING'},
+{ num: 'LGBTQ PEOPLE, CRIME & JUSTICE'},
+{ num: 'LIFE AND HEALTH INSURANCE'},
+{ num: 'LIFESPAN COMM RESEARCH METHODS'},
+{ num: 'LIFESPAN COMM, GEOG, & FOOD'},
+{ num: 'LIFESPAN COMM, GEOG, AND FOOD'},
+{ num: 'LIFESPAN DEVELOPMENT'},
+{ num: 'LIFESPAN&DIGITAL COMM CAPSTONE'},
+{ num: 'LINEAR ELECTRONICS'},
+{ num: 'LINEAR ELECTRONICS LAB'},
+{ num: 'LINEAR MODELS IN ED RESEARCH'},
+{ num: 'LINEAR STATISTICAL MODELS'},
+{ num: 'LINEAR SYSTEM ANALYSIS'},
+{ num: 'LIVE AUDIO ENGINEERING'},
+{ num: 'LOGIC AND PHILOSOPHY'},
+{ num: 'MACHINE LEARNING I'},
+{ num: 'MADRIGAL SINGERS'},
+{ num: 'MAINTENANCE ENGINEERING'},
+{ num: 'MAKING AFRICAN AMERICAN CINEMA'},
+{ num: 'MANAGEMENT SCIENCE'},
+{ num: 'MANAGEMENT WRITING'},
+{ num: 'MANAGERIAL ACCOUNTING'},
+{ num: 'MANAGERIAL ECONOMICS'},
+{ num: 'MANUFACTURING PROC & MATERIALS'},
+{ num: 'MAPS & GEOGRAPHIC INFORMATION'},
+{ num: 'MARINE CONSERVATION BIOLOGY'},
+{ num: 'MARINE ECOLOGY'},
+{ num: 'MARINE ECOLOGY LAB'},
+{ num: 'MARINE ENGINEERING I'},
+{ num: 'MARINE MICROBIOLOGY'},
+{ num: 'MARKETING OF SERVICES'},
+{ num: 'MARKETING POLICY AND STRATEGY'},
+{ num: 'MARKETING PRINCIPLES &PROBLEMS'},
+{ num: 'MARKETING RESEARCH'},
+{ num: 'MARKETING STRATEGY'},
+{ num: 'MASTERS SEMINAR'},
+{ num: 'MATERIAL SCIENCE LABORATORY'},
+{ num: 'MATERIALS SCIENCE'},
+{ num: 'MATERIALS SCIENCE SURFACES'},
+{ num: 'MATERIALS TESTING LABORATORY'},
+{ num: 'MATH THEORIES OF CONTINUA'},
+{ num: 'MATHEMATICAL STATISTICS II'},
+{ num: 'MATLAB'},
+{ num: 'ME LAB III-THERMO/FLUIDS'},
+{ num: 'ME LAB II-SOLID MECHANICS'},
+{ num: 'ME LAB I-MATERIALS SCIENCE'},
+{ num: 'MECHAN ENGINEERING DESIGN II'},
+{ num: 'MECHANICAL ENGINEER DESIGN I'},
+{ num: 'MECHANICS ELECTROMAG ACCEL'},
+{ num: 'MECHANICS OF DEFORMABLE BODIES'},
+{ num: 'MECHANICS OF FLUIDS'},
+{ num: 'MECHANISM ANALYSIS AND DESIGN'},
+{ num: 'MECHANISMS ANALYSIS AND DESIGN'},
+{ num: 'MECHATRONIC SYSTEM DESIGN'},
+{ num: 'MED PARASITE/MYCOLOGY LAB'},
+{ num: 'MEDIA AND POPULAR CULTURE'},
+{ num: 'MEDICAL BACTERIOLOGY'},
+{ num: 'MEDICAL BACTERIOLOGY METHODS'},
+{ num: 'MEDICAL MICROBIOLOGY'},
+{ num: 'MENTAL HEALTH COUNSELING'},
+{ num: 'METH & MATERIALS IN TESOL'},
+{ num: 'METH ADV ENGINEERING PROJECTS'},
+{ num: 'METH/MATERIALS SLP'},
+{ num: 'METHOD & MATERIAL IN HEALTH ED'},
+{ num: 'METHODS & MATERIALS IN HLTH ED'},
+{ num: 'METHODS & MATERIALS IN PE'},
+{ num: 'METHODS-EXPERIMENTAL PHYSICS'},
+{ num: 'MGMT OF FINANCIAL INSTITUTIONS'},
+{ num: 'MGMT OF SPECIAL POPULATIONS'},
+{ num: 'MGMT THERAPEUTIC REC SERVICES'},
+{ num: 'MICROBIAL GENETICS'},
+{ num: 'MICROCONTROLLERS'},
+{ num: 'MICROELECTRON FABRICATION'},
+{ num: 'MICROELECTRONIC MATL/PROCESSES'},
+{ num: 'MICROPROCESSOR LABORATORY'},
+{ num: 'MICROPROCESSORS/MICROCTRLRS'},
+{ num: 'MODEL ENGINEERING'},
+{ num: 'MODERN ARCHITECTURE'},
+{ num: 'MODERN ASTRONOMY'},
+{ num: 'MODERN ASTRONOMY LAB'},
+{ num: 'MODERN DANCE TECHNIQUE 2'},
+{ num: 'MODERN DANCE TECHNIQUE 4'},
+{ num: 'MODERN DANCE TECHNIQUE 6'},
+{ num: 'MODERN ENGINEERING MATERIALS'},
+{ num: 'MODERN SYNTHETIC ORGANIC CHEM'},
+{ num: 'MOLECULAR GENETICS'},
+{ num: 'MOTHERHOOD: TEXTS AND IMAGES'},
+{ num: 'MOTOR LEARNING'},
+{ num: 'MULTICULTURAL COUN EDUC & SUP'},
+{ num: 'MULTIDISC APPRCH HLTH SVC RSCH'},
+{ num: 'MULTILEVEL MODELING'},
+{ num: 'MULTI-NATIONAL MARKETING'},
+{ num: 'MULTIVAR STATS CRMNLGCL RSRCH'},
+{ num: 'MUSC ED-MUSC FOR ELEM TEACHER'},
+{ num: 'MUSC ED-SEC INSTRUMENTAL METH'},
+{ num: 'MUSIC ED: SECONDARY VOCAL METH'},
+{ num: 'MUSIC EDUC: PERCUSSION CLASS'},
+{ num: 'MUSIC EDUC: WOODWIND CLASS'},
+{ num: 'MUSIC EDUCATION: LOW BRASS'},
+{ num: 'MUSIC EDUCATION: LOWER STRINGS'},
+{ num: 'MUSIC IN HISTORY AND CULTURE'},
+{ num: 'MUSIC IN THE ROMANTIC ERA'},
+{ num: 'MUSIC LITERATURE SURVEY'},
+{ num: 'MUSIC PRODUCTION TECHNIQUES'},
+{ num: 'MUSIC PRODUCTION: MIDI I'},
+{ num: 'MUSIC THEORY'},
+{ num: 'MUSICIANS HLTH:MUSC & MEDICINE'},
+{ num: 'NATIVE AMERICAN HISTORY'},
+{ num: 'NAVAL LABORATORY I'},
+{ num: 'NAVAL LABORATORY II'},
+{ num: 'NAVAL LABORATORY III'},
+{ num: 'NAVAL LABORATORY IV'},
+{ num: 'NAVAL SEA POWER'},
+{ num: 'NAVAL SHIPS SYSTEMS II'},
+{ num: 'NAVIGATION & NAVAL OPER II'},
+{ num: 'NEEDS ANALYSIS & ASSESSMENT'},
+{ num: 'NEO LIBERAL CARCERAL STATE'},
+{ num: 'NETWORK ENGINEERING/DESIGN'},
+{ num: 'NETWORK SECUR: CONC-PROTO-PROG'},
+{ num: 'NETWORK/SERVER CONFIG & ADMIN'},
+{ num: 'NETWORKED SYSTEM SECURITY'},
+{ num: 'NEUROBIOLOGY'},
+{ num: 'NEUROSCIENCE II'},
+{ num: 'NEUROSCIENCES OF MOTOR CONTROL'},
+{ num: 'NEW DOMINIONS'},
+{ num: 'NEW MUSIC ENSEMBLE'},
+{ num: 'NEWS FOR TV & DIGITAL MEDIA'},
+{ num: 'NMED AND MOLECULAR IMAGING'},
+{ num: 'NMR SPECTROSCOPY'},
+{ num: 'NONPRFT FUND RAISNG IN HUM SVC'},
+{ num: 'NON-THERMAL PLASMA ENGINEERING'},
+{ num: 'NON-TRADITIONAL ANIMATION'},
+{ num: 'NONVERBAL COMMUNICATION'},
+{ num: 'NONVIOLENT COMM & PEACE'},
+{ num: 'NORMAL GYNECOLOGICAL CYTOLOGY'},
+{ num: 'NUCLEAR INSTRUMENTATION'},
+{ num: 'NUCLEAR MEDICINE TECHNOLOGY I'},
+{ num: 'NUCLEAR SYSTEMS II'},
+{ num: 'NUMBER SYSTEMS & DISCRETE MATH'},
+{ num: 'NUMBER/OPERATIONS MATH SPEC'},
+{ num: 'NURS CARE-CHILDBEARING FAMILY'},
+{ num: 'NURS CARE-INFANTS & CHILDREN'},
+{ num: 'NURS PROCESS/DRUG THERAPY II'},
+{ num: 'NURSING RESEARCH'},
+{ num: 'NUTRITION FOR FITNESS/SPORT'},
+{ num: 'NUTRITION OF NURSING PRACTICE'},
+{ num: 'OBJECT ORIENT PROGRAM/DESIGN'},
+{ num: 'OBSERVATION AND PRACTICUM'},
+{ num: 'OCCUPATIONAL CAREER TRANSITION'},
+{ num: 'OCEANOGRAPHY'},
+{ num: 'ODU-RES METH II-REGR/CORR DSGN'},
+{ num: 'OEAS FIELD STUDY II'},
+{ num: 'ONE HEALTH:PEOPLE, ANIMAL&ENV'},
+{ num: 'OPERA WORKSHOP'},
+{ num: 'OPERATING SYSTEMS'},
+{ num: 'OPERATIONS MANAGEMENT'},
+{ num: 'OPERATIONS RESEARCH'},
+{ num: 'OPTICAL FIBER COMMUNICATION'},
+{ num: 'OPTICAL FIBER COMMUNICATIONS'},
+{ num: 'OPTIMIZATION METHODS'},
+{ num: 'OPTION TRAD/VALUATION STRATEGY'},
+{ num: 'ORAL PATHOLOGY'},
+{ num: 'ORAL RADIOLOGY II'},
+{ num: 'ORAL RADIOLOGY II LAB'},
+{ num: 'ORDINARY DIFFERENTIAL EQUATION'},
+{ num: 'ORGANIC CHEMISTRY LABORATORY'},
+{ num: 'ORGANIC CHEMISTRY LECTURE'},
+{ num: 'ORGANIZATIONAL BEHAVIOR'},
+{ num: 'ORGANIZATIONAL COMMUNICATION'},
+{ num: 'ORGANIZATIONAL PSYCHOLOGY'},
+{ num: 'OUTDOOR RECREATION'},
+{ num: 'PAINTING STUDIO'},
+{ num: 'PAINTING: COMPOSITION'},
+{ num: 'PALEONTOLOGY'},
+{ num: 'PARIS/AUSCHWITZ STUDY ABROAD'},
+{ num: 'PARTL DIFFERENTL EQUATIONS I'},
+{ num: 'PATIENT EVALUATION II'},
+{ num: 'PEDAGOGY FOR DANCE EDUCATORS'},
+{ num: 'PERCEPTION'},
+{ num: 'PERCUSSION ENSEMBLE'},
+{ num: 'PERSONAL & COMMUNITY HEALTH'},
+{ num: 'PERSONAL FINANCIAL LITERACY'},
+{ num: 'PERSONNEL MGMT IN RECREATION'},
+{ num: 'PERSPECTIVES/INQUIRY/CURR INST'},
+{ num: '-AMERICAN STUDIES'},
+{ num: 'PERSUASION'},
+{ num: 'PETROLOGY'},
+{ num: 'PETROLOGY LAB'},
+{ num: 'PHAGE GENOMICS II'},
+{ num: 'PHARMACOLOGY & MED EMERGENCIES'},
+{ num: 'PHARMACOLOGY-ANESTHESIA DRUGS'},
+{ num: 'PHILOSOPHY OF RELIGION'},
+{ num: 'PHONETICS'},
+{ num: 'PHONOLOGY'},
+{ num: 'PHOTO SEMINAR 2'},
+{ num: 'PHOTOGRAPHY 2'},
+{ num: 'PHOTOGRAPHY 3'},
+{ num: 'PHYSICAL CHEMISTRY LECTURE II'},
+{ num: 'PHYSICAL CONDITIONING'},
+{ num: 'PHYSICAL GEOLOGY'},
+{ num: 'PHYSICAL GEOLOGY LAB'},
+{ num: 'PHYSICAL HAZARDS LABORATORY'},
+{ num: 'PHYSICS LABORATORY'},
+{ num: 'PHYSICS ON BACK OF ENVELOPE'},
+{ num: 'PHYSIOLOGICAL PSYCHOLOGY'},
+{ num: 'PHYSIOLOGY OF EXERCISE'},
+{ num: 'PILATES'},
+{ num: 'PILATES (R) MAT CLASS I'},
+{ num: 'PK-12 INSTRUCTIONAL TECHNOLOGY'},
+{ num: 'PLANKTON DYNAMICS'},
+{ num: 'PLANS AND SPECIFICATIONS'},
+{ num: 'PLANT GEOGRAPHY'},
+{ num: 'POLICE IN AMERICAN SOCIETY'},
+{ num: 'POLICE VIOLENCE & MASS INCARCE'},
+{ num: 'POLITICAL GEOGRAPHY'},
+{ num: 'POLITICS & TRENDS IN HIGHER ED'},
+{ num: 'POLITICS OF CLIMATE CHANGE:COM'},
+{ num: 'POLITICS OF SOCIAL MEDIA'},
+{ num: 'POLITICS OF THE MIDDLE EAST'},
+{ num: 'POPULATION ECOLOGY'},
+{ num: 'POPULATION GENETICS'},
+{ num: 'PORT MANAGEMENT'},
+{ num: 'POSITIVE PSYCHOLOGY'},
+{ num: 'POWER AND ENERGY LABORATORY'},
+{ num: 'POWER ELECTRONICS'},
+{ num: 'PRAC MENT HLTH COUN LEADERSHIP'},
+{ num: 'PRACTICUM AND PLANNING IN HPE'},
+{ num: 'PRACTICUM IN COUNSELING'},
+{ num: 'PRACTICUM IN COUNSELOR EDUC'},
+{ num: 'PRACTICUM IN READING'},
+{ num: 'PRACTM COLLEGE COUN LEADERSHIP'},
+{ num: 'PRECALCULUS I'},
+{ num: 'PRECALCULUS II'},
+{ num: 'PREP FOR ECE SENIOR DESIGN II'},
+{ num: 'PREPARING FOR THE PHYSICS GRE'},
+{ num: 'PREPARING HUM TEACHERS SCHOLAR'},
+{ num: 'PREVENTION AND CARE-INJURIES'},
+{ num: 'PRIN OF FINANCIAL ACCOUNTING'},
+{ num: 'PRIN OF INSURANCE & RISK MGMT'},
+{ num: 'PRIN OF MANAGERIAL ACCOUNTING'},
+{ num: 'PRIN PROF COUNSELING & ETHICS'},
+{ num: 'PRINC OF TECH ARCHITECTURE'},
+{ num: 'PRINC-ENVIRON HEALTH SCIENCE'},
+{ num: 'PRINC-INFORMATION TECHNOLOGY'},
+{ num: 'PRINCIPLES OF COACHING MGMT'},
+{ num: 'PRINCIPLES OF LEARNING'},
+{ num: 'PRINCIPLES OF MACROECONOMICS'},
+{ num: 'PRINCIPLES OF MICROECONOMICS'},
+{ num: 'PRINCIPLES OF MUSIC EDUCATION'},
+{ num: 'PRINCIPLES OF NUTRITION'},
+{ num: 'PRINCIPLES OF TEACHING DANCE'},
+{ num: 'PRINCIPLES OF TOXICOLOGY'},
+{ num: 'PRINCIPLES-ANES PRACTICE I'},
+{ num: 'PRINCIP-PROGRAMMING LANGUAGES'},
+{ num: 'PRINTMAKING STUDIO'},
+{ num: 'PRINTMAKING-INTRO LITHOGRAPHY'},
+{ num: 'PRINTMAKING-INTRO SCREENPRINT'},
+{ num: 'PRINTMAKING-THE RELIEF PRINT'},
+{ num: 'PROB SOLVING & PROGRMNG II LAB'},
+{ num: 'PROB SOLVING & PROGRMNG II REC'},
+{ num: 'PROBABILITY, STAT, RELIABILITY'},
+{ num: 'PROBABILITY-DEC ANALY-BUS STAT'},
+{ num: 'PROBATION,PAROLE & C-B CORRECT'},
+{ num: 'PROBLEM SOLVING & PRGMNG I'},
+{ num: 'PROBLEM SOLVING & PRGMNG I LAB'},
+{ num: 'PROBLEM SOLVING & PRGMNG I REC'},
+{ num: 'PROBLEM SOLVING & PRGRMNG II'},
+{ num: 'PROF ETHICS/LEGAL ISSUES ACCTG'},
+{ num: 'PROF HELP SKILLS IN HIGHED EDU'},
+{ num: 'PROF ISS SCHOOL COUNSELING K12'},
+{ num: 'PROF SELLING AND NEGOTIATION'},
+{ num: 'PROFESS WORKFORCE DEV II REC'},
+{ num: 'PROFESSIONAL PRACTICE OF ENGR'},
+{ num: 'PROFESSIONAL WORKFORCE DEV I'},
+{ num: 'PROFESSIONAL WORKFORCE DEV II'},
+{ num: 'PROFESSIONL WRKFORCE DEV I REC'},
+{ num: 'PROGRAM DEV-IMPLEMENT-FUNDING'},
+{ num: 'PROGRAM EVALUATION IN ED'},
+{ num: 'PROJECT DESIGN & MGMT II'},
+{ num: ' DESIGN AND MGMT I'},
+{ num: 'PROJECT MANAGEMENT'},
+{ num: 'PROJECT MGMT IN INFO SYSTEMS'},
+{ num: 'PROSTHETICS AND ORTHOTICS'},
+{ num: 'PRSPCTVS TCH WRLD HIST TO 1500'},
+{ num: 'PSY OF EXCEPTIONAL CHILD'},
+{ num: 'PSYCHOEDUCATIONAL GROUPS'},
+{ num: 'PSYCHOLOGICAL TESTS'},
+{ num: 'PSYCHOLOGY OF ADOLESCENCE'},
+{ num: 'PSYCHOLOGY OF SEX'},
+{ num: 'PSYCHOLOGY OF WOMEN'},
+{ num: 'PSYCHOLOGY-AFRICAN AMERICANS'},
+{ num: 'PUB POLICY FORMULATION IMPLMTN'},
+{ num: 'PUBLIC BUDGET & FINANCIAL MGT'},
+{ num: 'PUBLIC PERSONNEL ADMIN'},
+{ num: 'PUBLIC POLICY AND EVALUATION'},
+{ num: 'PUBLIC RELATIONS'},
+{ num: 'PUBLIC RELATIONS & CRISIS COMM'},
+{ num: 'PUBLIC RELATIONS WRITING'},
+{ num: 'PUBLIC SPEAKING'},
+{ num: 'QUALITATIVE RESEARCH IN ED'},
+{ num: 'QUALITY SYSTEMS DESIGN'},
+{ num: 'QUANT RES MTHDS IN HLTH CARE'},
+{ num: 'QUANTITATIVE METHODS'},
+{ num: 'QUANTITATIVE METHODS LAB'},
+{ num: 'UANTUM CHEMISTRY'},
+{ num: 'QUANTUM MECHANICS II'},
+{ num: 'RACE, CULTURE & PUBLIC POLICY'},
+{ num: 'RADIATION HEALTH'},
+{ num: 'RADIO'},
+{ num: 'READING TO LEARN ACROSS CURRIC'},
+{ num: 'REAL ESTATE APPRAISAL'},
+{ num: 'REAL ESTATE INVESTMNT ANALYSIS'},
+{ num: 'REALISM IN MODERN-CONTEMPORARY'},
+{ num: 'RECOVERY'},
+{ num: 'RECREATION PRGMG & LEADERSHIP'},
+{ num: 'REFUGEE STUDIES'},
+{ num: 'REGRESSION/CORRELATIONAL DSGN'},
+{ num: 'REGRESSION/CORRELATIONAL LAB'},
+{ num: 'REINFORCED CONCRETE DESIGN'},
+{ num: 'RELIGION & SOCIETY'},
+{ num: 'RELIGIONS OF TIBET'},
+{ num: 'RENAISSANCE & BAROQUE WOMEN'},
+{ num: 'RENAISSANCE AND MODERN ART'},
+{ num: 'REPORTING - TV & DIGITAL MEDIA'},
+{ num: 'REPORTING AND NEWS WRITING I'},
+{ num: 'REPORTING AND NEWS WRITING II'},
+{ num: 'RESEARCH DESIGN'},
+{ num: 'RESEARCH FUNDAMENTALS'},
+{ num: 'RESEARCH IN REC/TOURISM - LAB'},
+{ num: 'RESEARCH IN REC/TOURISM LECT'},
+{ num: 'RESEARCH MECH-EXERCISE SCIENCE'},
+{ num: 'RESEARCH METH IN MATH & SCI'},
+{ num: 'RESEARCH METHODS'},
+{ num: 'RESEARCH METHODS IN PSYCH'},
+{ num: 'RESEARCH METHODS LAB'},
+{ num: 'RESEARCH METHODS MATH & SCI'},
+{ num: 'RESEARCH METHODS-ART HISTORY'},
+{ num: 'RESEARCH SEM-GLOBAL SECURITY'},
+{ num: 'RESPONSE SURFACE METHODOLOGY'},
+{ num: 'RESRCH DESIGN & EVAL-HLTH PROF'},
+{ num: 'RETAIL MARKETING'},
+{ num: 'RETAIL MERCHANDISING & BUYING'},
+{ num: 'RHETORICAL CRITICISM'},
+{ num: 'RHYTHMIC ANALYSIS'},
+{ num: 'RISK ANALYSIS'},
+{ num: 'RISK ANALYSIS AND CONTROL'},
+{ num: 'ROBOTS AND MANUFACT AUTOMATION'},
+{ num: 'ROBUST ENGINEERING DESIGN'},
+{ num: 'RUSSIAN POLITICS'},
+{ num: 'SALES MANAGEMENT'},
+{ num: 'SALES TECHNIQUES'},
+{ num: 'SAMPLING THEORY'},
+{ num: 'SCIENTIFIC INQUIRY II'},
+{ num: 'SCREENWRITING I'},
+{ num: 'SCREENWRITING II'},
+{ num: 'SCRIPT & PERFORMANCE ANALYSIS'},
+{ num: 'SCULPTURE STUDIO'},
+{ num: 'SEM-ADV MARKETING METHODOLOGY'},
+{ num: 'SEMINAR'},
+{ num: 'SEMINAR & FIELD EXP PE & HLTH'},
+{ num: 'SEMINAR IN INVESTMENTS'},
+{ num: 'SEMINAR IN LITERARY STUDIES'},
+{ num: 'SEMINAR IN NEW MEDIA'},
+{ num: 'SEMINAR: ARISTOTLE'},
+{ num: 'SEMINAR-MKTG CONCEPTS/ISSUES'},
+{ num: 'SEMIN-CURRENT FINANCIAL TOPICS'},
+{ num: 'SEM-INSURANCE/RISK MANAGEMENT'},
+{ num: 'SEM-INTERNATL MARKETING PROB'},
+{ num: 'SEM-MARKETING PLANNING & STRAT'},
+{ num: 'SENIOR LEADERSHIP LAB'},
+{ num: 'SENIOR SEMINAR IN HISTORY'},
+{ num: 'SENIOR SEM-INTERNATL STUDIES'},
+{ num: 'SENIOR SHOW'},
+{ num: 'SENIOR THESIS'},
+{ num: 'SENIOR THESIS II'},
+{ num: 'SHAKESPEARES HIST & COMEDIES'},
+{ num: 'SHAKESPEARES TRAG AND POETRY'},
+{ num: 'SHIPPING MANAGEMENT'},
+{ num: 'SIGN I-BEGIN NOVERBAL COMMUN'},
+{ num: 'SIMUL MODEL/ANALY-BUS SYSTEMS'},
+{ num: 'SIMUL MODEL/ANALY-BUS SYTEMS'},
+{ num: 'SIMULATION DESIGN'},
+{ num: 'SIMULATION FORMALISMS'},
+{ num: 'SIMULATION IN TRANSPORT NETS'},
+{ num: 'SIMULATION SOFTWARE DESIGN'},
+{ num: 'SIMULATION SOFTWARE DSGN LAB'},
+{ num: 'SLAVES, PLANTS AND DISEASES'},
+{ num: 'SMALL N EXPER. DESIGN'},
+{ num: 'SOC & CULT ISS IN COUNSELING'},
+{ num: 'SOC APP OF COMPUT & DATA ANAL'},
+{ num: 'SOCIAL ASPECTS OF CLOTHING'},
+{ num: 'SOCIAL CHANGE & COMM SYSTEMS'},
+{ num: 'SOCIAL INEQUALITY'},
+{ num: 'SOCIAL MEDIA MARKETING'},
+{ num: 'SOCIAL PROBLEMS'},
+{ num: 'SOCIAL PSYCHOLOGY'},
+{ num: 'SOCIAL SCIENCE & CRIME MAPPING'},
+{ num: 'SOCIAL WELFARE'},
+{ num: 'SOCIOLINGUISTICS'},
+{ num: 'SOCIOLOGICAL THEORY'},
+{ num: 'SOCIOLOGY OF MINORITY GROUPS'},
+{ num: 'SOCIOLOGY OF WOMEN'},
+{ num: 'SOIL MECHANICS'},
+{ num: 'SOILS AND FOUNDATIONS'},
+{ num: 'SOILS TESTING LABORATORY'},
+{ num: 'SOUND DESIGN FOR STAGE&CAMERA'},
+{ num: 'SPACE FLIGHT DYNAMICS/CONTROL'},
+{ num: 'SPAIN AND ITS EMPIRE'},
+{ num: 'SPANISH SENIOR RESEARCH SEM'},
+{ num: 'SPATIAL ANALYS COASTAL ENVIRON'},
+{ num: 'SPATIAL ANALYS-COASTAL ENVIRON'},
+{ num: 'SPECIAL PROBLEMS AND RESEARCH'},
+{ num: 'SPECIAL TOPICS:OCEAN DATA'},
+{ num: 'SPEECH AND HEARING SCIENCE'},
+{ num: 'SPIRITUALITY IN COUNSELING'},
+{ num: 'SPONSORSHIP AND EVENT PLANNING'},
+{ num: 'SPORT ADMINISTRATIVE THEORY'},
+{ num: 'SPORT FACILITY MANAGEMENT'},
+{ num: 'SPORT MARKETING'},
+{ num: 'SPORT MEDIA /PUBLIC RELATIONS'},
+{ num: 'SPORT PSYCHOLOGY'},
+{ num: 'SPRDSHT MODEL/ANALYS BUS DEC'},
+{ num: 'SR PROJECT: MERCH RETAILING'},
+{ num: 'STAT CONCEPTS-ENGINEERING MGMT'},
+{ num: 'STATE AND LOCAL GOVERNMENT'},
+{ num: 'STATICS'},
+{ num: 'STATISTICAL ANALYS/SIMULATION'},
+{ num: 'STATISTICAL DATA ANALY-MGT SCI'},
+{ num: 'STATISTICAL MECHANICS'},
+{ num: 'STATISTICAL SIMULATION/PROGRMG'},
+{ num: 'STATS FOR SPORTS MEDICINE'},
+{ num: 'STEP 1 INQUIRY APPROACHES-STEM'},
+{ num: 'STEP 2 INQUIRY BASED STEM DSG'},
+{ num: 'STOCHASTIC MODELING'},
+{ num: 'STRATEGIC LEADERSHIP'},
+{ num: 'STRATEGIC MANAGEMENT'},
+{ num: 'STRATEGIC PLAN/INSTIT EFFECTIV'},
+{ num: 'STRATEGIC SOURCING/PURCHASING'},
+{ num: 'STRENGTH OF MATERIALS'},
+{ num: 'STRENGTH/CONDITION LDRSHP LAB'},
+{ num: 'STRENGTH/CONDITION LEADERSHIP'},
+{ num: 'STRUC/FUNC-ADV NURS PRACT II'},
+{ num: 'STRUCTURAL DYNAMICS'},
+{ num: 'STRUCTURAL EQUATION MODELING'},
+{ num: 'STRUCTURAL GEOLOGY'},
+{ num: 'STRUCTURAL GEOLOGY LAB'},
+{ num: 'STRUCTURES 1'},
+{ num: 'STU DIVRS LRN NEED-GEN ED CLAS'},
+{ num: 'STUDENT MANAGED FUND'},
+{ num: 'STUDENT TEACHING'},
+{ num: 'SUBSTANCE ABUSE TX & RESEARCH'},
+{ num: 'SUBSTANTIVE CRIMINAL LAW'},
+{ num: 'SUPPLY CHAIN IN E-BUSINESS'},
+{ num: 'SUPPLY CHAIN MGMT & LOGISTICS'},
+{ num: 'SURVEY-COMMUNICATION DISORDERS'},
+{ num: 'SURVEYING FOR ENGINEERS'},
+{ num: 'SUSTAINABLE BUILDING PRACTICES'},
+{ num: 'SYMPHONIC BAND'},
+{ num: 'SYMPHONY ORCHESTRA'},
+{ num: 'SYNTAX'},
+{ num: 'SYNTHETIC ENVIRONMENTS'},
+{ num: 'SYSTEM ARCHITECTURE & MODELING'},
+{ num: 'SYSTEMS ANALYSIS'},
+{ num: 'SYSTEMS ARCHITECTURE & MODELNG'},
+{ num: 'SYSTEMS DESIGN/IMPLEMENTATION'},
+{ num: 'SYSTEMS ENGINEERING MANAGEMENT'},
+{ num: 'SYSTEMS OF SYSTEMS ENGINEERING'},
+{ num: 'TANG DYNASTY CHINA & THE BIRTH'},
+{ num: 'TAX RESEARCH'},
+{ num: 'TAXATION'},
+{ num: 'TCHNG HLTH & PHYS ED, PREK-8'},
+{ num: 'TEACHER CANDIDATE SEMINAR'},
+{ num: 'TEACHING COLLEGE COMPOSITION'},
+{ num: 'TEACHING INDVL SPORTS & DANCE'},
+{ num: 'TEACHING INJURY CARE FOR SPRTS'},
+{ num: 'TEACHING OF COMP-GRADES 6-12'},
+{ num: 'TECHNOLOGICAL SYSTEMS CONTROL'},
+{ num: 'TECHNOLOGY AND SOCIETY'},
+{ num: 'TECHNOLOGY AND WAR'},
+{ num: 'TECHNOLOGY AND YOUR WORLD'},
+{ num: 'TECHNOLOGY ON EVE OF WWI'},
+{ num: 'TECHNOLOGY: ITS NATURE/SIGNIF'},
+{ num: 'TELEVISION AND SOCIETY'},
+{ num: 'TESTING AND CLIENT ASSESSMENT'},
+{ num: 'THE AMERICAN NOVEL TO 1920'},
+{ num: 'THE BOOK'},
+{ num: 'THE CRAFT OF FICTION'},
+{ num: 'THE CRAFT OF POETRY'},
+{ num: 'THE CRIMINAL  SYSTEM'},
+{ num: 'THE EMERGENCE OF NEW CHINA'},
+{ num: 'THE FASHION INDUSTRY'},
+{ num: 'THE LATIN AMERICAN PAST'},
+{ num: 'THE LAW OF HIGHER EDUCATION'},
+{ num: 'THE LIFE & FILMS OF MIYAZAKI'},
+{ num: 'THE MIDDLE EAST'},
+{ num: 'THE MULTICULTURAL UNIVERSITY'},
+{ num: 'THE SHORT SCRIPT'},
+{ num: 'THE SHORT STORY'},
+{ num: 'THE TEACHING OF LITERATURE'},
+{ num: 'THE THEATRE EXPERIENCE'},
+{ num: 'THE UNITED STATES, 1945-1991'},
+{ num: 'THEATRE ACTIVITIES'},
+{ num: 'THEOR-COMPAR SOCIOPOLIT '},
+{ num: 'THEORIES OF COUNSELING & PSYCH'},
+{ num: 'THEORIES OF LITERATURE'},
+{ num: 'THEORIES OF PERSONALITY'},
+{ num: 'THEORIES/THERAPIES-STUTTERING'},
+{ num: 'THEORIES-COMPAR SOCIOPOLIT STD'},
+{ num: 'THEORY & METHODS IN HUMANITIES'},
+{ num: 'THEORY & PRACTICE II'},
+{ num: 'THEORY AND PRACTICE IV'},
+{ num: 'THEORY CNFLICT RES & PROB SLVG'},
+{ num: 'THEORY IN THE HEALTH SCIENCES'},
+{ num: 'THEORY OF ADVANCED AIKIDO'},
+{ num: 'THEORY OF ADVANCED KARATEDO'},
+{ num: 'THEORY OF STATISTICS'},
+{ num: 'THERMAL & STATISTICAL PHYSICS'},
+{ num: 'THERMAL APPLICATIONS'},
+{ num: 'THERMODYNAMICS'},
+{ num: 'THERMODYNAMICS I'},
+{ num: 'THERMODYNAMICS II'},
+{ num: 'THINKTANKII SOCIAL ENTREPRENER'},
+{ num: 'THREE-DIMENSIONAL DESIGN'},
+{ num: 'THRY CNFLCT RES/PRBLM SLVNG'},
+{ num: 'TODAYS COLL STUDENT/DIVERSITY'},
+{ num: 'TOPICS IN DENTAL HYGIENE'},
+{ num: 'TOPICS IN ELECTRICAL ENGR'},
+{ num: 'TOPICS IN PHYSICAL THERAPY I'},
+{ num: 'TOPICS:  BME PRINCIPLES'},
+{ num: 'TOPICS:  BODY IN ASIAN ART'},
+{ num: 'TOPICS:  ENVI. FLUID MECHANICS'},
+{ num: 'TOPICS:  THE DARKROOM'},
+{ num: 'TOPICS: ALTERNATIVE JEWELRY'},
+{ num: 'TOPICS: CONTEMPORARY JAZZ'},
+{ num: 'TOPICS: CREATING AN AD PORTFOL'},
+{ num: 'TOPICS: FILM AND SOCIETY'},
+{ num: 'TOPICS: INDOOR CYLING/SPIN'},
+{ num: 'TOPICS: INTRO TO ART THERAPY'},
+{ num: 'TOPICS: POE'},
+{ num: 'TOPICS: SPANISH GRAPHIC NOVELS'},
+{ num: 'TOPICS: TITAN AERIAL EXPLORER'},
+{ num: 'TOPICS:FILM AND SOCIETY'},
+{ num: 'TOPICS:MARINE POWER SYSTEMS'},
+{ num: 'TOPICS:REAL-WORLD MKTG PROJECT'},
+{ num: 'TOPICS-OCCUPATIONAL EDUCATION'},
+{ num: 'TOURISM & HOSPITALITY INDUSTRY'},
+{ num: 'TPC IN MGMT/BUS COMMUNICATION'},
+{ num: 'TPC: ADV DANC PEDAGOGY'},
+{ num: 'TPC: AMERICAN DREAMS'},
+{ num: 'TPC: GLOBAL ASIAN DIASPORAS'},
+{ num: 'TPC: LANGUAGE AND INSTITUTIONS'},
+{ num: 'TPC: MUSIC, CULTURE, & MEDIA'},
+{ num: 'TPC: PUNISHMENT AND FORGIVENES'},
+{ num: 'TPC: QUEER LITERATURES'},
+{ num: 'TPC::LANGUAGE AND INSTITUTIONS'},
+{ num: 'TPC:BLACK QUEER FEMINISMS'},
+{ num: 'TPC:COASTAL OCEAN/CARBON CYCLE'},
+{ num: 'TPC:CONTEMP ISSUES IN LEADERSH'},
+{ num: 'TPC:EXPLORATION-MATH THINKING'},
+{ num: 'TPC:HISTORY OF MODERN AFRICA'},
+{ num: 'TPC:LEADERSHIP & ORG CHANGE'},
+{ num: 'TPC:MAKING AFRICAN-AMER CINEMA'},
+{ num: 'TPC:PATTERN RECOG/MOLECUL IMAG'},
+{ num: 'TPC:PUNISHMENT AND FORGIVENESS'},
+{ num: 'TPC:THE EUROPEAN SPORTS MODEL'},
+{ num: 'TPCS:  INTELLIGENT MACHINES'},
+{ num: 'TPCS:  MEXICAN POPULAR CULTURE'},
+{ num: 'TPCS: CRIMINOLOGY & PUBLIC POL'},
+{ num: 'TPCS: INTELLIGENT MACHINES'},
+{ num: 'TPCS: MARINE MOLECULAR ECO LAB'},
+{ num: 'TPCS: MARINE MOLECULAR ECOLOGY'},
+{ num: 'TPCS: MATLAB APPLICATIONS'},
+{ num: 'TPCS: MEXICAN POPULAR CULTURE'},
+{ num: 'TPCS: OPTO-ELECTRO-FLUIDICS'},
+{ num: 'TRANS TO PROF NURSING PRAC'},
+{ num: 'TRANSFER SEMINAR'},
+{ num: 'TRANSITION TO LIEUTENANT'},
+{ num: 'TRANSMISSION NETWORKS'},
+{ num: 'TRANSPORTATION SAFETY'},
+{ num: 'TRANSPORTATION TECHNOLOGY'},
+{ num: 'TRENDS ISS OF ECON & WORKFORCE'},
+{ num: 'TUTORIAL WORK-SPEC STUDIO TPCS'},
+{ num: 'TUTORIALS/PARIS/AUSCHWITZ'},
+{ num: 'TV NEWS PRODUCTION'},
+{ num: 'TWO-DIMENSIONAL DESIGN'},
+{ num: 'TYPOGRAPHY'},
+{ num: 'U.S. AND MIDDLE EAST'},
+{ num: 'UAV TOPICS'},
+{ num: 'UG BRIDGE READING & SPEAKING'},
+{ num: 'UNDERGRADUATE BRIDGE WRITING'},
+{ num: 'UNDERSTANDING MEDIA'},
+{ num: 'UNDERSTANDING VIOLENCE'},
+{ num: 'UNDERSTANDING WORLD LITERATURE'},
+{ num: 'UNIVERSITY PHYSICS'},
+{ num: 'UNIVERSITY PHYSICS LAB'},
+{ num: 'URBAN & REGIONAL PLANNING'},
+{ num: 'URBAN ECONOMICS'},
+{ num: 'URINALYSIS AND BODY FLUIDS'},
+{ num: 'US-MEXICO BORDERLANDS'},
+{ num: 'VICTIMOLOGY'},
+{ num: 'VICTORIAN LITERATURE'},
+{ num: 'VIDEO AND AUDIO EDITING'},
+{ num: 'VIOLENCE IN AMER: CAUSES & SOL'},
+{ num: 'VIOLIN ENSEMBLE'},
+{ num: 'VIRGINIA HISTORY'},
+{ num: 'VISUAL COMMUNICATION'},
+{ num: 'VISUAL MERCHANDISING/DISPLAY'},
+{ num: 'VOICE AND DICTION'},
+{ num: 'VOICE AND RESONANCE DISORDERS'},
+{ num: 'VOICE OVER'},
+{ num: 'WALL STREET 101'},
+{ num: 'WATER & WASTEWATER TECHNOLOGY'},
+{ num: 'WATER DIST/WASTEWATER COL SYS'},
+{ num: 'WATER RESOURCES ENGINEERING'},
+{ num: 'WATER/WASTEWATER TREATMENT'},
+{ num: 'WEATHER, CLIMATE & SOCIETY'},
+{ num: 'WEB SCIENCE'},
+{ num: 'WEIGHT TRAINING'},
+{ num: 'WELLNESS PROGRAMMING & ADMIN'},
+{ num: 'WELLNESS PROGRAMMING/ADMINIST'},
+{ num: 'WIND ENSEMBLE'},
+{ num: 'WIRELESS COMM/MOBILE COMPUTING'},
+{ num: 'WIRELESS COMMUNIC NETWORKS'},
+{ num: 'WIRELESS COMMUNICATIONS I'},
+{ num: 'WOMEN & GENDER IN THE MID EAST'},
+{ num: 'WOMEN AND TECHNOLOGY WORLDWIDE'},
+{ num: 'WOMEN IN U. S. HISTORY'},
+{ num: 'WOMEN WRITERS'},
+{ num: 'WOMEN,THE ENVIRON & CLIMATE CH'},
+{ num: 'WOMEN: A GLOBAL PERSPECTIVE'},
+{ num: 'WORKSHOP IN INSTRUMENTAL MUSIC'},
+{ num: 'WORLD LITERATURE I'},
+{ num: 'WORLD POLITICS'},
+{ num: 'WORLD RELIGIONS:BELIEFS&VALUES'},
+{ num: 'WORLD RESOURCES'},
+{ num: 'WORLDS PAST SINCE 1500'},
+{ num: 'WRITING FOR COLLEGE SUCCESS'},
+{ num: 'WRITING IN DIGITAL SPACES'},
+{ num: 'YOGA'},
+{ num: 'YOGA 1'},
+{ num: 'YOUTH DEV THRU REC - LAB'},
+{ num: 'YOUTH DEV THRU REC - LECTURE'},
+{ num: 'ZEITGEIST/POST-WAR DIVIDED GER'},
+{ num: 'ZUMBA'}
+      ]
+});
+
+numbers.initialize();
+
+$('.typeahead').typeahead(null, {
+    displayKey: 'num',
+    source: numbers.ttAdapter()
+});
+</script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./proj_files/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')</script>
+    <script src="./proj_files/bootstrap.min.js"></script>
+    <script src="./proj_files/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./proj_files/ie10-viewport-bug-workaround.js"></script>
+    <script src="./proj_files/js"></script>
+    <script src="./proj_files/gmaps.js"></script>
+    <script src="./proj_files/script.js"></script>
+	<script src="./proj_files/d3.v3.min.js"></script>
+	<script src="./proj_files/d3.min.js"></script>
+	<script src="./proj_files/d3.v3.min(1).js"></script>
+
+    <script>
+				function markvalues() { console.log("Inside markvalues")
+	
+					search_course = document.getElementById("list").elements["search"].value;
+					time_val = document.getElementById("list").elements["time"].value;
+					major_val = document.getElementById("list").elements["major"].value;
+					
+					
+var course = document.getElementById("dummy").textContent = search_course;
+var major = document.getElementById("dummy").textContent = major_val;
+var time = document.getElementById("dummy").textContent = time_val;
+
+var myOptions1 = {
+			zoom:10,
+			center:new google.maps.LatLng(36.885425,-76.305764),
+			mapTypeId: google.maps.MapTypeId.HYBRID};
+			map = new google.maps.Map(d3.select("#gmap_canvas").node(), myOptions1);
+			//map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions1);
+			
+			d3.csv("http://webspace.cs.odu.edu/~spatloll/map/test_data.csv", function(error, data) {
+			if(error) throw error;
+			
+			data.forEach(function(d) {
+			console.log(data[0]);
+			
+			
+		
+		if(course == d.TITLE && major == d.SUBJECT && time !== d.STARTTIME)	{
+//var FiltData = data.filter(function(d, i) { if(d.TITLE == course) return d;})
+		//var m= FiltData.filter(function(FiltData){return FiltData.TITLE,FiltData.LAT,FiltData.LNG;})
+			if(d.TITLE == course){
+				marker = new google.maps.Marker({
+				map: map,position: new google.maps.LatLng(d.LAT,d.LNG),
+				
+				map: map,
+				title:d.BLDG
+			
+				});
+			
+				var contentString = '<strong> Building: ' +d.BLDG+ '</strong>'+'<br>' + '<strong> Course : ' +d.TITLE+ '</strong>'
+				infowindow = new google.maps.InfoWindow({content:contentString });
+				google.maps.event.addListener(marker, 'click', function(){
+					map.panTo(marker.getPosition());
+					map.setZoom(17);
+					map.setCenter(marker.getPosition());
+					infowindow.open(map,marker);
+					});
+				
+				
+				//infowindow.open(map,marker);
+			
+			
+				google.maps.event.addDomListener(window, 'load', markvalues);
+				}
+		
+		}
+		else if (course == d.TITLE && major !== d.SUBJECT)
+				{
+					marker = new google.maps.Marker({
+					map: map,position: new google.maps.LatLng(d.LAT,d.LNG),
+			
+					map: map,
+					title:d.TITLE
+			
+					});
+					var contentString = '<strong> Building: ' +d.BLDG+ '</strong>'+'<br><p> <strong> Course : ' +d.TITLE+'</strong>'+'<br><p> <strong>Course Time : ' +d.STARTTIME+'</strong>';
+					infowindow = new google.maps.InfoWindow({content:contentString });
+					google.maps.event.addListener(marker,'click', function(){
+					map.panTo(marker.getPosition());
+					map.setZoom(17);
+					map.setCenter(marker.getPosition());});
+					
+					google.maps.event.addListener(marker, 'mouseover', 
+					function(){
+					infowindow.open(map,marker);}
+					);
+					
+					//infowindow.open(map,marker1);
+			
+			
+					google.maps.event.addDomListener(window, 'load', markvalues);
+			
+				}	
+		else if (major == d.SUBJECT && course !== d.TITLE) 
+				{
+					marker = new google.maps.Marker({
+					map: map,position: new google.maps.LatLng(d.LAT,d.LNG),
+			
+					map: map,
+					title:d.BLDG
+			
+					});
+					contentString = '<strong> Building: ' +d.BLDG+ '</strong>'+'<br><p> <strong> Course : ' +d.TITLE+'</strong>'
+					infowindow = new google.maps.InfoWindow({content:contentString });
+					google.maps.event.addListener(marker, 'click', 
+					function(){
+					map.panTo(marker.getPosition());
+					map.setZoom(17);
+					map.setCenter(marker.getPosition());
+					infowindow.open(map,marker);}
+					);
+					
+					
+					
+					infowindow.open(map,marker);
+			
+			
+					google.maps.event.addDomListener(window, 'load', markvalues);
+			
+				}	
+		else if (time == d.STARTTIME) 
+				{
+					marker = new google.maps.Marker({
+					map: map,position: new google.maps.LatLng(d.LAT,d.LNG),
+			
+					map: map,
+					title:d.TITLE
+			
+					});
+			
+					var contentString = '<strong> Building: ' +d.BLDG+ '</strong>'+'<br><p> course : ' +'<strong>' +d.TITLE+'</strong>'
+					infowindow = new google.maps.InfoWindow({content:contentString });
+					google.maps.event.addListener(marker, 'click', 
+					function(){
+					map.setZoom(17);
+				map.setCenter(marker.getPosition());
+				
+				
+					infowindow.open(map,marker);
+					
+					});
+					
+					infowindow.open(map,marker);
+			
+					google.maps.event.addDomListener(window, 'load', markvalues);
+			
+				}
+				//else{  window.alert("invalid entries");  }
+		});
+		});
+		}
+		
+ 
+    </script>
+	<div align="center">
+
+<a style="" "color="" :grey="" "="" href="http://webspace.cs.odu.edu/~spatloll/stats.html?" target="_blank"> MORE STATISTICS   </a>
+</div>
+
+<div id="global-zeroclipboard-html-bridge" class="global-zeroclipboard-container" style="position: absolute; left: 0px; top: -9999px; width: 15px; height: 15px; z-index: 999999999;">      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="global-zeroclipboard-flash-bridge" width="100%" height="100%">         <param name="movie" value="/assets/flash/ZeroClipboard.swf?noCache=1461708886959">         <param name="allowScriptAccess" value="sameDomain">         <param name="scale" value="exactfit">         <param name="loop" value="false">         <param name="menu" value="false">         <param name="quality" value="best">         <param name="bgcolor" value="#ffffff">         <param name="wmode" value="transparent">         <param name="flashvars" value="trustedOrigins=surabhi.anilkreddy.me%2C%2F%2Fsurabhi.anilkreddy.me%2Chttp%3A%2F%2Fsurabhi.anilkreddy.me">         <embed src="/assets/flash/ZeroClipboard.swf?noCache=1461708886959" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="100%" height="100%" name="global-zeroclipboard-flash-bridge" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="trustedOrigins=surabhi.anilkreddy.me%2C%2F%2Fsurabhi.anilkreddy.me%2Chttp%3A%2F%2Fsurabhi.anilkreddy.me" scale="exactfit">                </object> */
+
+</div></body></html>
